@@ -8,5 +8,14 @@
         "</ax-alert>"
       ],
       "description": "create alert"
+    },
+    "ax-badge" : { 
+      "prefix": "ax-badge", 
+      "body": [  
+        "<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"
+       
+      ],
+      "description": "create badge"
     }
+
 }
