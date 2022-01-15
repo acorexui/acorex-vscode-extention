@@ -1,21 +1,54 @@
-{    
-    "ax-alert" : { 
-      "prefix": "ax-alert", 
-      "body": [  
-        "<ax-alert color=\"${1:primary}\">",
-        "   <ax-alert-title>\"${2:title}\"</ax-alert-title>",      
-        "   <ax-alert-content>\"${3:content}\"</ax-alert-content>",      
-        "</ax-alert>"
-      ],
-      "description": "create alert"
-    },
-    "ax-badge" : { 
-      "prefix": "ax-badge", 
-      "body": [  
-        "<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"
-       
-      ],
-      "description": "create badge"
-    }
-
+{
+  "ax-alert": {
+    "prefix": "ax-alert",
+    "body": [
+      "<ax-alert color=\"${1:primary}\">",
+      "   <ax-alert-title>\"${2:title}\"</ax-alert-title>",
+      "   <ax-alert-content>\"${3:content}\"</ax-alert-content>",
+      "</ax-alert>"
+    ],
+    "description": "create alert"
+  },
+  "ax-badge": {
+    "prefix": "ax-badge",
+    "body": [
+      "<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"
+    ],
+    "description": "create badge"
+  },
+  "ax-button": {
+    "prefix": "ax-button",
+    "body": [
+      "<ax-button color\"${1:dark} text=\"${2:Button}\"></ax-button>"
+    ],
+    "description": "create button"
+  },
+  "ax-button-group": {
+    "prefix": "ax-button-group",
+    "body": [
+      "<ax-button-group color=\"${1:primary}\" (onItemClick)=\"${2:handleOnItemClick($event)}\"> <ax-button text=\"${3:Bold}\"><ax-prefix><ax-icon icon=\"${4:}\"></ax-icon></ax-prefix></ax-button><ax-button text=\"${5:Italic}\"><ax-prefix><ax-icon icon=\"${6:}\"></ax-icon></ax-prefix></ax-button><ax-button text=\"${7:Underline}\"><ax-prefix><ax-icon icon=\"${8:}\"></ax-icon></ax-prefix></ax-button></ax-button-group>"
+    ],
+    "description": "create buttonGroup"
+  },
+  "ax-calendar": {
+    "prefix": "ax-calendar",
+    "body": [
+      "<ax-calendar (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
+    ],
+    "description": "create calendar"
+  },
+  "ax-check-box": {
+    "prefix": "ax-check-box",
+    "body": [
+      "<ax-check-box [value]=\"${1:}\"></ax-check-box>"
+    ],
+    "description": "create checkBox"
+  },
+  "ax-date-picker": {
+    "prefix": "ax-date-picker",
+    "body": [
+      "<ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" ></ax-date-picker>"
+    ],
+    "description": "create date-picker"
+  }
 }
