@@ -1,0 +1,22 @@
+{
+    "ax-page": {
+        "prefix": "ax-page",
+        "body": [
+         "import { Component, OnInit } from '@angular/core';",
+         "import { AXBasePageComponent } from '@acorex/components';",
+         " ",
+         "@Component({",
+        "   selector: 'app-\"${1:name}\"'",
+        "   templateUrl: './\"${2:name}\".component.html',",
+        "   styleUrls: ['./\"${3:name}\".component.scss']",
+        "})",
+        "export class \"${4:AppSimplePage}\" extends AXBasePageComponent implements OnInit  {",
+        "constructor() {",
+        "   super()",
+        "}",
+        "ngOnInit(): void { }"
+        
+        ],
+        "description": "create page"
+      }
+}
