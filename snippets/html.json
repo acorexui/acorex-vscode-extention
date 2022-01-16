@@ -3,8 +3,8 @@
     "prefix": "ax-alert",
     "body": [
       "<ax-alert color=\"${1:primary}\">",
-      "   <ax-alert-title>\"${2:title}\"</ax-alert-title>",
-      "   <ax-alert-content>\"${3:content}\"</ax-alert-content>",
+      "   <ax-alert-title>${2:title}</ax-alert-title>",
+      "   <ax-alert-content>${3:content}</ax-alert-content>",
       "</ax-alert>"
     ],
     "description": "create alert"
@@ -19,7 +19,7 @@
   "ax-button": {
     "prefix": "ax-button",
     "body": [
-      "<ax-button color\"${1:dark} text=\"${2:Button}\"></ax-button>"
+      "<ax-button color=\"${1:dark}\" text=\"${2:Button}\"></ax-button>"
     ],
     "description": "create button"
   },
