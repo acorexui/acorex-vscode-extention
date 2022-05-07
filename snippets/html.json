@@ -1,4 +1,14 @@
 {
+   "ax-action-sheet":{
+    "prefix": "ax-action-sheet",
+    "body": [
+      "<ax-action-sheet caption=\"${1:caption}\">",
+      "  <ax-action-sheet-item *ngFor=\"let item of actionItems\" color=\"${2:light}\" [text]=\"${1:item.text}\">",
+      "  </ax-action-sheet-item>",
+      "</ax-action-sheet>"
+    ],
+    "description": "Avatars can be used to represent people or objects."
+  },
   "ax-alert": {
     "prefix": "ax-alert",
     "body": [
@@ -7,63 +17,115 @@
       "   <ax-alert-content>${3:content}</ax-alert-content>",
       "</ax-alert>"
     ],
-    "description": "create alert"
+    "description": "An alert displays a short, important message in a way that attracts the user's attention without interrupting the user's task."
+  },
+  "ax-avatar":{
+    "prefix": "ax-avatar",
+    "body": [
+      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10  ax-me-1\"></ax-avatar>"
+    ],
+    "description": "Avatars can be used to represent people or objects."
   },
   "ax-badge": {
     "prefix": "ax-badge",
     "body": [
       "<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"
     ],
-    "description": "create badge"
+    "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
+  },
+  "ax-breadcrumbs": {
+    "prefix": "ax-breadcrumbs",
+    "body": [
+      "<ax-breadcrumbs>",
+      "    <ax-breadcrumbs-item text=\"${1:Home}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Product}\" ></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
+      "</ax-breadcrumbs>"
+    ],
+    "description": "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy."
   },
   "ax-button": {
     "prefix": "ax-button",
     "body": [
       "<ax-button color=\"${1:dark}\" text=\"${2:Button}\"></ax-button>"
     ],
-    "description": "create button"
+    "description": "Button Component is used to trigger an action or event, submitting forms, opening dialog boxes, and other porpuses in different sizes and looks."
   },
   "ax-button-group": {
     "prefix": "ax-button-group",
     "body": [
-      "<ax-button-group color=\"${1:primary}\" (onItemClick)=\"${2:handleOnItemClick($event)}\"> <ax-button text=\"${3:Bold}\"><ax-prefix><ax-icon icon=\"${4:}\"></ax-icon></ax-prefix></ax-button><ax-button text=\"${5:Italic}\"><ax-prefix><ax-icon icon=\"${6:}\"></ax-icon></ax-prefix></ax-button><ax-button text=\"${7:Underline}\"><ax-prefix><ax-icon icon=\"${8:}\"></ax-icon></ax-prefix></ax-button></ax-button-group>"
+      "<ax-button-group color=\"${1:primary}\" (onItemClick)=\"${2:handleOnItemClick($event)}\">",
+      "  <ax-button text=\"${3:Bold}\">",
+      "    <ax-prefix>",
+      "     <ax-icon icon=\"${4:}\"></ax-icon>",
+      "    </ax-prefix>",
+      "  </ax-button>",
+      "  <ax-button text=\"${3:Italic}\">",
+      "   <ax-prefix>",
+      "     <ax-icon icon=\"${6:}\">",
+      "     </ax-icon>",
+      "   </ax-prefix>",
+      "  </ax-button>",
+      "  <ax-button text=\"${7:Underline}\">",
+      "   <ax-prefix>",
+      "     <ax-icon icon=\"${8:}\"></ax-icon>",
+      "   </ax-prefix>",
+      "  </ax-button>",
+      "</ax-button-group>"
     ],
-    "description": "create buttonGroup"
+    "description": "You can use the Button Group component to group buttons. You can use different modes to group multiple buttons."
   },
   "ax-calendar": {
     "prefix": "ax-calendar",
     "body": [
       "<ax-calendar (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
     ],
-    "description": "create calendar"
+    "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
   },
   "ax-check-box": {
     "prefix": "ax-check-box",
     "body": [
       "<ax-check-box [value]=\"${1:}\"></ax-check-box>"
     ],
-    "description": "create checkBox"
+    "description": "Checkboxes allow the user to select one or more items from a set."
   },
   "ax-collapse": {
     "prefix": "ax-collapse",
     "body": [
       "<ax-collapse caption=\"${1:panel header}\">  </ax-collapse>"
     ],
-    "description": "create collapse"
+    "description": "A content area which can be collapsed and expanded."
   },
   "ax-date-picker": {
     "prefix": "ax-date-picker",
     "body": [
       "<ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" ></ax-date-picker>"
     ],
-    "description": "create date-picker"
+    "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
   },
   "ax-dropdown-button": {
     "prefix": "ax-dropdown-button",
     "body": [
-      "<ax-button text=\"${1:}\"><ax-dropdown-panel (onItemClick)=\"${2:handleOnItemClick($event)}\"><ax-button-item text=\"${3:}\" name=\"${4:}\"><ax-prefix><ax-icon icon=\"${5:}\"></ax-icon></ax-prefix></ax-button-item><ax-button-item text=\"${6:}\" color=\"${7:}\" name=\"${8:}\"><ax-prefix><ax-icon icon=\"${9:}\"></ax-icon></ax-prefix></ax-button-item></ax-dropdown-panel><ax-suffix><ax-icon icon=\"${10:}\"></ax-icon></ax-suffix></ax-button>"
+      "<ax-button text=\"${1:}\">",
+      "  <ax-dropdown-panel (onItemClick)=\"${2:handleOnItemClick($event)}\">",
+      "     <ax-button-item text=\"${3:}\" name=\"${4:}\">",
+      "       <ax-prefix>",
+      "        <ax-icon icon=\"${5:}\"></ax-icon>",
+      "       </ax-prefix>",
+      "     </ax-button-item>",
+      "     <ax-button-item text=\"${6:}\" color=\"${7:}\" name=\"${8:}\">",
+      "       <ax-prefix>",
+      "       <ax-icon icon=\"${9:}\"></ax-icon>",
+      "       </ax-prefix>",
+      "     </ax-button-item>",
+      "  </ax-dropdown-panel>",
+      "       <ax-suffix>",
+      "         <ax-icon icon=\"${10:}\"></ax-icon>",
+      "       </ax-suffix>",
+      "</ax-button>"
     ],
-    "description": "create dropdown-button"
+    "description": "Dropdowns are toggleable, contextual overlays for displaying lists of links and more."
   },
   "ax-menu": {
     "prefix": "ax-menu",
