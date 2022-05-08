@@ -1,0 +1,12 @@
+<ax-form #validationForm>
+ <ax-form-field>
+  <ax-text-box class="ax-text-2xl">
+   <ax-validation-rule message="textbox can't be empty" rule="required">
+   </ax-validation-rule>
+  </ax-text-box>
+ </ax-form-field>
+ <ax-button (click)="triggerValidation()" class="ax-mt-2" text="send" color="primary">
+ </ax-button>
+ <p>Try yourself: Tap to click button with empty field.</p>
+ <p class="ax-text-danger-500 ax-text-sm">Note: Make sure to use ax-validation-rule inside ax-form-field wrapper.</p>
+</ax-form>
