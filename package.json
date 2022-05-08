@@ -4,7 +4,7 @@
     "description": "extention for acorex framework",
     "repository": "https://github.com/acorexui/acorex-vscode-extention.git",
     "icon": "assets/images/icon.png",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "publisher": "acorex",
     "engines": {
         "vscode": "^1.63.0"
