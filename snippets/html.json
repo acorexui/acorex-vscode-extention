@@ -92,7 +92,7 @@
       "   <div class=\"ax-cursor-pointer\">",
       "    <img class=\"ax-bg-cover ax-bg-no-repeat ax-h-96 ax-w-screen\" src={{${6:carousel.image}}} alt=\"banner\" />",
       "   </div>",
-      "  </carousel-item>",
+      "  </ax-carousel-item>",
       "  <ax-carousel-pager></ax-carousel-pager>",
       " </ax-carousel>",
       "</div>"
@@ -322,7 +322,7 @@
   "ax-input-mask": {
     "prefix": "ax-input-mask",
     "body": [
-      " <ax-input-mask mask=\"00000000000\"></ax-input-mask>"
+      " <ax-input-mask mask=\"${1:00000000000}\"></ax-input-mask>"
     ],
     "description": "create text-box"
   },
