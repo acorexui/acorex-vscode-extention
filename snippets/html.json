@@ -38,7 +38,7 @@
     "body": [
       "<ax-breadcrumbs>",
       "    <ax-breadcrumbs-item text=\"${1:Home}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Product}\" ></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Product}\"></ax-breadcrumbs-item>",
       "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
       "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
       "</ax-breadcrumbs>"
@@ -80,6 +80,21 @@
     "prefix": "ax-calendar",
     "body": [
       "<ax-calendar (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
+    ],
+    "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
+  },
+  "ax-carousel": {
+    "prefix": "ax-carousel",
+    "body": [
+      "<div class=\"ax-flex\">",
+      " <ax-carousel [perPage]=\"1\" [autoplay]=\"${2:true}\" [rewind]=\"${3:true}\" [centered]=\"${4:true}\">",
+      "  <carousel-item *ngFor=\"let carousel of _carouselItem\">",
+      "   <div class=\"ax-cursor-pointer\">",
+      "    <img class=\"ax-bg-cover ax-bg-no-repeat ax-h-96 ax-w-screen\" src={{carousel.image}} alt=\"banner\" />",
+      "   </div>",
+      "  <ax-carousel-pager></ax-carousel-pager>",
+      " </ax-carousel>",
+      "</div>"
     ],
     "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
   },
@@ -134,6 +149,24 @@
     ],
     "description": "create menu"
   },
+  "ax-form-validation": {
+    "prefix": "ax-form-validation",
+    "body": [
+      "<ax-form #validationForm>",
+      " <ax-form-field>",
+      "  <ax-text-box class=\"ax-text-2xl\">",
+      "   <ax-validation-rule message=\"${1:textbox can't be empty}\" rule=\"${2:required}\">",
+      "   </ax-validation-rule>",
+      "  </ax-text-box>",
+      " </ax-form-field>",
+      " <ax-button (click)=\"triggerValidation()\" class=\"ax-mt-2\" text=\"${3:send}\" color=\"${4:primary}\">",
+      " </ax-button>",
+      " <p>Try yourself: Tap to click button with empty field.</p>",
+      " <p class=\"ax-text-danger-500 ax-text-sm\">Note: Make sure to use ax-validation-rule inside ax-form-field wrapper.</p>",
+      "</ax-form>"
+    ],
+    "description": "A Form shows a set of related fields in a structured way with validation feature."
+  },
   "ax-number-box": {
     "prefix": "ax-number-box",
     "body": [
@@ -176,6 +209,20 @@
     ],
     "description": "create selection-list"
   },
+  "ax-skelton": {
+    "prefix": "ax-skelton",
+    "body": [
+      "<div class=\"ax-flex\">",
+      " <div class=\"ax-block ax-w-28 ax-h-28 ax-skeleton\"></div>",
+      " <div class=\"ax-ms-3\">",
+      "     <div class=\"ax-block ax-w-60 ax-h-8 ax-skeleton\"></div>",
+      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ax-skeleton\"></div>",
+      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ax-skeleton\"></div>",
+      " </div>",
+      "</div>"
+    ],
+    "description": "Skeleton loading screens provide an approximate representation of a site layout while a page is loading data"
+  },
   "ax-switch": {
     "prefix": "ax-switch",
     "body": [
@@ -183,11 +230,65 @@
     ],
     "description": "create switch"
   },
+  "ax-table": {
+    "prefix": "ax-table",
+    "body": [
+      "<table class=\"ax-table\">",
+      " <thead>",
+      "   <tr>",
+      "     <th>First Name</th>",
+      "     <th>Last Name</th>",
+      "     <th>Hero Title</th>",
+      "   </tr>",
+      " </thead>",
+      " <tbody>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Bruce</td>",
+      "     <td data-label=\"Last Name\">Wayne</td>",
+      "     <td data-label=\"Hero Title\">Batman</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Peter</td>",
+      "     <td data-label=\"Last Name\">Parker</td>",
+      "     <td data-label=\"Hero Title\">Spiderman</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Bruce</td>",
+      "     <td data-label=\"Last Name\">Banner</td>",
+      "     <td data-label=\"Hero Title\">The Hulk</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Clark</td>",
+      "     <td data-label=\"Last Name\">Kent</td>",
+      "     <td data-label=\"Hero Title\">Superman</td>",
+      "   </tr>",
+      " </tbody>",
+      "</table>"
+    ],
+    "description": "The table component is the only set of classes that you can use to have a simple but efficient table."
+  },
+  "ax-tabs": {
+    "prefix": "ax-tabs",
+    "body": [
+      "<ax-tabs class=\"ax-look-${1:pills-color} mytabs ax-tabs-fit ax-w-full\">",
+      " <ax-tab-item text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      " <ax-tab-item text=\"${2:tabName2}\" (activeChange)=\"_handleActiveChange2($event)\"></ax-tab-item>",
+      "</ax-tabs>"
+    ],
+    "description": "A view that switches between multiple child views using interactive user interface elements."
+  },
   "ax-text-box": {
     "prefix": "ax-text-box",
     "body": [
       "<ax-text-box></ax-text-box>"
     ],
     "description": "create text-box"
+  },
+ "ax-textarea": {
+    "prefix": "ax-textarea",
+    "body": [
+      "<ax-textarea></ax-textarea>"
+    ],
+    "description": "The ax-textarea tag defines a multi-line text input control."
   }
 }
