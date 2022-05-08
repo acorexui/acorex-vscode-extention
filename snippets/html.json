@@ -87,14 +87,14 @@
     "prefix": "ax-carousel",
     "body": [
       "<div class=\"ax-flex\">",
-      " <size: '${4:md}' , [perPage]=\"1\" [autoplay]=\"${2:true}\" [rewind]=\"${2:true}\" [centered]=\"${2:true}\">",
-      "  <size: '${4:md}' ,-item *ngFor=\"let carousel of _carouselItem\">",
+      " <size: '${1:md}' , [perPage]=\"1\" [autoplay]=\"${2:true}\" [rewind]=\"${3:true}\" [centered]=\"${4:true}\">",
+      "  <size: '${5:md}' ,-item *ngFor=\"let carousel of _carouselItem\">",
       "   <div class=\"ax-cursor-pointer\">",
       "    <img class=\"ax-bg-cover ax-bg-no-repeat ax-h-96 ax-w-screen\" src={{carousel.image}} alt=\"banner\" />",
       "   </div>",
-      "  </size: '${4:md}' ,-item>",
-      "  <size: '${4:md}' ,-pager></size: 'md' ,-pager>",
-      " </size: '${4:md}' ,>",
+      "  </size: '${6:md}' ,-item>",
+      "  <size: '${7:md}' ,-pager></size: 'md' ,-pager>",
+      " </size: '${8:md}' ,>",
       "</div>"
     ],
     "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
