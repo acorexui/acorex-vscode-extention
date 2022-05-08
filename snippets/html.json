@@ -3,7 +3,7 @@
     "prefix": "ax-action-sheet",
     "body": [
       "<ax-action-sheet caption=\"${1:caption}\">",
-      "  <ax-action-sheet-item *ngFor=\"let item of actionItems\" color=\"${2:light}\" [text]=\"${1:item.text}\">",
+      "  <ax-action-sheet-item *ngFor=\"let item of actionItems\" color=\"${2:light}\" [text]=\"${3:item.text}\">",
       "  </ax-action-sheet-item>",
       "</ax-action-sheet>"
     ],
@@ -88,10 +88,11 @@
     "body": [
       "<div class=\"ax-flex\">",
       " <ax-carousel [perPage]=\"1\" [autoplay]=\"${2:true}\" [rewind]=\"${3:true}\" [centered]=\"${4:true}\">",
-      "  <carousel-item *ngFor=\"let carousel of _carouselItem\">",
+      "  <ax-carousel-item *ngFor=\"let carouselItem of ${5:_carouselItems}\">",
       "   <div class=\"ax-cursor-pointer\">",
-      "    <img class=\"ax-bg-cover ax-bg-no-repeat ax-h-96 ax-w-screen\" src={{carousel.image}} alt=\"banner\" />",
+      "    <img class=\"ax-bg-cover ax-bg-no-repeat ax-h-96 ax-w-screen\" src={{${6:carousel.image}}} alt=\"banner\" />",
       "   </div>",
+      "  </carousel-item>",
       "  <ax-carousel-pager></ax-carousel-pager>",
       " </ax-carousel>",
       "</div>"
@@ -318,6 +319,23 @@
     ],
     "description": "create text-box"
   },
+  "ax-input-mask": {
+    "prefix": "ax-input-mask",
+    "body": [
+      " <ax-input-mask mask=\"00000000000\"></ax-input-mask>"
+    ],
+    "description": "create text-box"
+  },
+  "ax-loading": {
+    "prefix": "ax-loading",
+    "body": [
+      "<ax-button  color=\"primary\" class=\"ax-w-full\" [text]=\"some text\" [disabled]=\"isLoading\">",
+          "<ax-loading *ngIf=\"isLoading\"></ax-loading>",
+      "</ax-button>"
+    ],
+    "description": "create text-box"
+  },
+  
  "ax-textarea": {
     "prefix": "ax-textarea",
     "body": [
