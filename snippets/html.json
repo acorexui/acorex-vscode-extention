@@ -210,6 +210,20 @@
     ],
     "description": "create selection-list"
   },
+  "ax-skelton": {
+    "prefix": "ax-skelton",
+    "body": [
+      "<div class=\"ax-flex\">",
+      " <div class=\"ax-block ax-w-28 ax-h-28 ax-skeleton\"></div>",
+      " <div class=\"ax-ms-3\">",
+      "     <div class=\"ax-block ax-w-60 ax-h-8 ax-skeleton\"></div>",
+      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ax-skeleton\"></div>",
+      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ax-skeleton\"></div>",
+      " </div>",
+      "</div>"
+    ],
+    "description": "Skeleton loading screens provide an approximate representation of a site layout while a page is loading data"
+  },
   "ax-switch": {
     "prefix": "ax-switch",
     "body": [
@@ -217,11 +231,65 @@
     ],
     "description": "create switch"
   },
+  "ax-table": {
+    "prefix": "ax-table",
+    "body": [
+      "<table class=\"ax-table\">",
+      " <thead>",
+      "   <tr>",
+      "     <th>First Name</th>",
+      "     <th>Last Name</th>",
+      "     <th>Hero Title</th>",
+      "   </tr>",
+      " </thead>",
+      " <tbody>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Bruce</td>",
+      "     <td data-label=\"Last Name\">Wayne</td>",
+      "     <td data-label=\"Hero Title\">Batman</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Peter</td>",
+      "     <td data-label=\"Last Name\">Parker</td>",
+      "     <td data-label=\"Hero Title\">Spiderman</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Bruce</td>",
+      "     <td data-label=\"Last Name\">Banner</td>",
+      "     <td data-label=\"Hero Title\">The Hulk</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Clark</td>",
+      "     <td data-label=\"Last Name\">Kent</td>",
+      "     <td data-label=\"Hero Title\">Superman</td>",
+      "   </tr>",
+      " </tbody>",
+      "</table>"
+    ],
+    "description": "The table component is the only set of classes that you can use to have a simple but efficient table."
+  },
+  "ax-tabs": {
+    "prefix": "ax-tabs",
+    "body": [
+      "<ax-tabs class=\"ax-look-${1:pills-color} mytabs ax-tabs-fit ax-w-full\">",
+      " <ax-tab-item text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      " <ax-tab-item text=\"${2:tabName2}\" (activeChange)=\"_handleActiveChange2($event)\"></ax-tab-item>",
+      "</ax-tabs>"
+    ],
+    "description": "A view that switches between multiple child views using interactive user interface elements."
+  },
   "ax-text-box": {
     "prefix": "ax-text-box",
     "body": [
       "<ax-text-box></ax-text-box>"
     ],
     "description": "create text-box"
+  },
+ "ax-textarea": {
+    "prefix": "ax-textarea",
+    "body": [
+      "<ax-textarea></ax-textarea>"
+    ],
+    "description": "The ax-textarea tag defines a multi-line text input control."
   }
 }
