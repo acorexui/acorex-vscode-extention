@@ -86,16 +86,18 @@
   "ax-carousel": {
     "prefix": "ax-carousel",
     "body": [
-      "<div class=\"ax-flex\">",
-      " <ax-carousel [perPage]=\"1\" [autoplay]=\"${2:true}\" [rewind]=\"${3:true}\" [centered]=\"${4:true}\">",
-      "  <ax-carousel-item *ngFor=\"let carouselItem of ${5:_carouselItems}\">",
-      "   <div class=\"ax-cursor-pointer\">",
-      "    <img class=\"ax-bg-cover ax-bg-no-repeat ax-h-96 ax-w-screen\" src={{${6:carousel.image}}} alt=\"banner\" />",
-      "   </div>",
-      "  </ax-carousel-item>",
-      "  <ax-carousel-pager></ax-carousel-pager>",
-      " </ax-carousel>",
-      "</div>"
+      "<ax-carousel width=\"${1:100%}\" height=\"${2:100%}\" [perMove]=\"${3:1}\" [perPage]=\"${4:1}\" [wheel]=\"${5:true}\" [snap]=\"${6:true}\"",
+      " [rewind]=\"${7:true}\">",
+      "   <ax-carousel-item class=\"ax-h-full\" *ngFor=\"let carouselItem of ${8:_carouselItems}\">",
+      "    <article class=\"ax-flex-col ax-flex ax-items-center\" (click)=\"${9:_handleOnItemClick}(param)",
+      "       <div class=\"ax-w-20 ax-h-20 ax-p-2 lg:ax-h-24 lg:ax-w-24 lg:ax-p-3 ax-bg-white ax-flex ax-items-center",     "       ax-cursor-pointer ax-justify-center ax-shadow-md ax-rounded-md",
+      "       <img width=\"100%\" [src]=\"carouselItem.image\" alt=\"avatar\" />",
+      "       </div>",
+      "       <h5 class=\"ax-font-medium ax-my-2 ax-text-sm ax-block\">{{carouselItem.title}}</h5>",
+      "    </article>",
+      "   </ax-carousel-item>",
+      "   <ax-carousel-arrows class=\"ax-text-dark-400\"></ax-carousel-arrows>",
+      "</ax-carousel>"
     ],
     "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
   },
