@@ -38,7 +38,7 @@
     "body": [
       "<ax-breadcrumbs>",
       "    <ax-breadcrumbs-item text=\"${1:Home}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Product}\" ></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Product}\"></ax-breadcrumbs-item>",
       "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
       "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
       "</ax-breadcrumbs>"
@@ -80,6 +80,22 @@
     "prefix": "ax-calendar",
     "body": [
       "<ax-calendar (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
+    ],
+    "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
+  },
+  "ax-carousel": {
+    "prefix": "ax-carousel",
+    "body": [
+      "<div class=\"ax-flex\">",
+      " <size: '${4:md}' , [perPage]=\"1\" [autoplay]=\"${2:true}\" [rewind]=\"${2:true}\" [centered]=\"${2:true}\">",
+      "  <size: '${4:md}' ,-item *ngFor=\"let carousel of _carouselItem\">",
+      "   <div class=\"ax-cursor-pointer\">",
+      "    <img class=\"ax-bg-cover ax-bg-no-repeat ax-h-96 ax-w-screen\" src={{carousel.image}} alt=\"banner\" />",
+      "   </div>",
+      "  </size: '${4:md}' ,-item>",
+      "  <size: '${4:md}' ,-pager></size: 'md' ,-pager>",
+      " </size: '${4:md}' ,>",
+      "</div>"
     ],
     "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
   },
@@ -133,6 +149,24 @@
       "<ax-menu [textField]=\"'${1:}'\"  [items]=\"${2:}\" [hasChildField]=\"'${3:}'\"  [icon]=\"'${4:}'\" [disableField]=\"'${5:}'\" (onMenuItemClick)=\"${5:onMenuItemClick($event)}\"></ax-menu>"
     ],
     "description": "create menu"
+  },
+  "ax-form-validation": {
+    "prefix": "ax-form-validation",
+    "body": [
+      "<ax-form #validationForm>",
+      " <ax-form-field>",
+      "  <ax-text-box class=\"ax-text-2xl\">",
+      "   <ax-validation-rule message=\"${1:textbox can't be empty}\" rule=\"${1:required}\">",
+      "   </ax-validation-rule>",
+      "  </ax-text-box>",
+      " </ax-form-field>",
+      " <ax-button (click)=\"triggerValidation()\" class=\"ax-mt-2\" text=\"${1:send}\" color=\"${1:primary}\">",
+      " </ax-button>",
+      " <p>Try yourself: Tap to click button with empty field.</p>",
+      " <p class=\"ax-text-danger-500 ax-text-sm\">Note: Make sure to use ax-validation-rule inside ax-form-field wrapper.</p>",
+      "</ax-form>"
+    ],
+    "description": "A Form shows a set of related fields in a structured way with validation feature."
   },
   "ax-number-box": {
     "prefix": "ax-number-box",
