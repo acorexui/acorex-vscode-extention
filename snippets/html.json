@@ -148,7 +148,7 @@
   "ax-menu": {
     "prefix": "ax-menu",
     "body": [
-      "<ax-menu [textField]=\"'${1:}'\"  [items]=\"${2:}\" [hasChildField]=\"'${3:}'\"  [icon]=\"'${4:}'\" [disableField]=\"'${5:}'\" (onMenuItemClick)=\"${5:onMenuItemClick($event)}\"></ax-menu>"
+      "<ax-menu [textField]=\"'${1:}'\"  [items]=\"${2:}\" direction=\"${3:vertical}\" [hasChildField]=\"'${4:}'\"  [icon]=\"'${5:}'\" [disableField]=\"'${6:}'\" (onMenuItemClick)=\"${7:onMenuItemClick($event)}\"></ax-menu>"
     ],
     "description": "create menu"
   },
