@@ -337,7 +337,13 @@
     ],
     "description": "create text-box"
   },
-  
+  "ax-label": {
+    "prefix": "ax-label",
+    "body": [
+      "<ax-label>${1:Type your label here...}</ax-label>"
+    ],
+    "description": "add label on forms"
+  },
  "ax-textarea": {
     "prefix": "ax-textarea",
     "body": [
