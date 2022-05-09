@@ -398,5 +398,14 @@
       "</ax-button>"
     ],
     "description": "add icon inside button"
+  },
+  "ax-loading-in-button": {
+    "prefix": "ax-loading-in-button",
+    "body": [
+      "<ax-button class=\"ax-sm\" look=\"blank\" (onClick)=\"_onButtoClick\">",
+      "  <ax-loading *ngIf=\"loading\"></ax-loading>", 
+      "</ax-button>"
+    ],
+    "description": "add loading inside button"
   }
 }
