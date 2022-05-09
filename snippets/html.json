@@ -90,7 +90,7 @@
       " [rewind]=\"${7:true}\">",
       "   <ax-carousel-item class=\"ax-h-full\" *ngFor=\"let carouselItem of ${8:_carouselItems}\">",
       "    <article class=\"ax-flex-col ax-flex ax-items-center\" (click)=\"${9:_handleOnItemClick}(param)",
-      "       <div class=\"ax-w-20 ax-h-20 ax-p-2 lg:ax-h-24 lg:ax-w-24 lg:ax-p-3 ax-bg-white ax-flex ax-items-center",     "       ax-cursor-pointer ax-justify-center ax-shadow-md ax-rounded-md",
+      "       <div class=\"ax-w-20 ax-h-20 ax-p-2 lg:ax-h-24 lg:ax-w-24 lg:ax-p-3 ax-bg-white ax-flex ax-items-center",     "       ax-cursor-pointer ax-justify-center ax-shadow-md ax-rounded-md>",
       "       <img width=\"100%\" [src]=\"carouselItem.image\" alt=\"avatar\" />",
       "       </div>",
       "       <h5 class=\"ax-font-medium ax-my-2 ax-text-sm ax-block\">{{carouselItem.title}}</h5>",
