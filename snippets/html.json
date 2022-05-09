@@ -160,7 +160,7 @@
       "     ${4:// Add your drawer content here}",
       "</ax-drawer>",
       " <ax-drawer-content class=\"md:ax-bg-slate-50\">",
-      "     ${5:// Add your page content here}",
+      "     ${5:// Add your page content here or pass component children <router-outlet></router-outlet>}",
       " </ax-drawer-content>",
       "</ax-drawer-container>"
     ],
