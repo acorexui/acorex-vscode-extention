@@ -158,10 +158,10 @@
     "body": [
       "<ax-drawer-container>",
       " <ax-drawer #drawer location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"'${3:overlay}'\">",
-      "     ${4:// Add your drawer content here}",
+      "     ${4:// Add your drawer content here.}",
       "</ax-drawer>",
       " <ax-drawer-content class=\"md:ax-bg-slate-50\">",
-      "     ${5:// Add your page content here or pass child component (router-outlet).",
+      "     ${5:// Add your page content here or pass child component (router-outlet).}",
       " </ax-drawer-content>",
       "</ax-drawer-container>"
     ],
