@@ -34,7 +34,11 @@
   "ax-avatar": {
     "prefix": "ax-avatar",
     "body": [
-      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10  ax-me-1\"></ax-avatar>"
+      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10  ax-me-1\">",
+      "     <ax-icon>",
+      "       ${4:// Put your Avatar here.}",
+      "     </ax-icon>",
+      "</ax-avatar>"
     ],
     "description": "Avatars can be used to represent people or objects."
   },
@@ -42,6 +46,32 @@
     "prefix": "ax-badge",
     "body": [
       "<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"
+    ],
+    "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
+  },
+  "ax-badge-prefix-icon": {
+    "prefix": "ax-badge-with-prefix-icon",
+    "body": [
+      "<ax-badge text=\"Badge with prefix icon\" color=\"danger\" class=\"ax-ms-2\">",
+      "   <ax-prefix>",
+      "     <ax-content>",
+      "       ${4:// Put your Avatar here.}",
+      "     </ax-content>",
+      "   </ax-prefix>",
+      "</ax-badge>"
+    ],
+    "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
+  },
+  "ax-badge-suffix-icon": {
+    "prefix": "ax-badge-with-suffix-icon",
+    "body": [
+      "<ax-badge text=\"Badge with prefix icon\" color=\"danger\" class=\"ax-ms-2\">",
+      "   <ax-suffix>",
+      "     <ax-content>",
+      "       ${4:// Put your Avatar here.}",
+      "     </ax-content>",
+      "   </ax-suffix>",
+      "</ax-badge>"
     ],
     "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
   },
