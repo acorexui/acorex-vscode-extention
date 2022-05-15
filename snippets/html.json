@@ -156,13 +156,13 @@
   "ax-drawer": {
     "prefix": "ax-drawer",
     "body": [
-      "<ax-drawer-container>",
-      " <ax-drawer #drawer location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"'${3:overlay}'\">",
+      "<ax-drawer-container class=\"ax-fixed\">",
+      "   <ax-drawer #drawer location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"'${3:overlay}'\">",
       "     ${4:// Add your drawer content here.}",
-      "</ax-drawer>",
-      " <ax-drawer-content class=\"md:ax-bg-slate-50\">",
+      "   </ax-drawer>",
+      "   <ax-content class=\"md:ax-bg-slate-50\">",
       "     ${5:// Add your page content here or pass child component (router-outlet).}",
-      " </ax-drawer-content>",
+      "   </ax-content>",
       "</ax-drawer-container>"
     ],
     "description": "create Drawer"
@@ -250,7 +250,7 @@
   "ax-select-box": {
     "prefix": "ax-select-box",
     "body": [
-      "<ax-select-box [items]=\"${1:}\"  textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\"  [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"></ax-select-box>"
+      "<ax-select-box [items]=\"${1:}\"  textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\"  [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"_handleOnValueChange($event)\"></ax-select-box>"
     ],
     "description": "create select-box"
   },
@@ -366,10 +366,10 @@
     ],
     "description": "The ax-textarea tag defines a multi-line text input control."
   },
-  "ax-page-footer": {
-    "prefix": "ax-page-footer",
+  "ax-footer": {
+    "prefix": "ax-footer",
     "body": [
-      "<ax-page-footer></ax-page-footer>"
+      "<ax-footer></ax-footer>"
     ],
     "description": "Adds Footer Seprator to the popup"
   },
