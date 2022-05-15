@@ -97,7 +97,7 @@
   "ax-button-group": {
     "prefix": "ax-button-group",
     "body": [
-      "<ax-button-group color=\"${1:primary}\" (onItemClick)=\"${2:handleOnItemClick($event)}\">",
+      "<ax-button-group color=\"${1:primary}\" look=\"twotone\" (onItemClick)=\"${2:handleOnItemClick($event)}\">",
       "  <ax-button text=\"${3:Bold}\">",
       "    <ax-prefix>",
       "     <ax-icon icon=\"${4:}\"></ax-icon>",
@@ -118,20 +118,63 @@
     ],
     "description": "You can use the Button Group component to group buttons. You can use different modes to group multiple buttons."
   },
+  "ax-button-group-multi": {
+    "prefix": "ax-button-group",
+    "body": [
+      "<ax-button-group color=\"${1:primary}\" selection=\"${2:multiple\" look=\"${3:twotone\" (onItemClick)=\"${4:handleOnItemClick($event)}\">",
+      "  <ax-button text=\"${5:Bold}\">",
+      "    <ax-prefix>",
+      "     <ax-icon icon=\"${6:}\"></ax-icon>",
+      "    </ax-prefix>",
+      "  </ax-button>",
+      "  <ax-button text=\"${7:Italic}\">",
+      "   <ax-prefix>",
+      "     <ax-icon icon=\"${8:}\">",
+      "     </ax-icon>",
+      "   </ax-prefix>",
+      "  </ax-button>",
+      "  <ax-button text=\"${9:Underline}\">",
+      "   <ax-prefix>",
+      "     <ax-icon icon=\"${10:}\"></ax-icon>",
+      "   </ax-prefix>",
+      "  </ax-button>",
+      "</ax-button-group>"
+    ],
+    "description": "You can use the Button Group component to group buttons. You can use different modes to group multiple buttons."
+  },
   "ax-calendar": {
     "prefix": "ax-calendar",
     "body": [
-      "<ax-calendar (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
+      "<ax-calendar [min]=\"_minValue\" [max]=\"_maxValue\" (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
     ],
     "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
   },
-  "ax-carousel": {
-    "prefix": "ax-carousel",
+  "ax-carousel-with-pager": {
+    "prefix": "ax-carousel-with-pager",
     "body": [
-      "<ax-carousel width=\"${1:100%}\" height=\"${2:100%}\" [perMove]=\"${3:1}\" [perPage]=\"${4:1}\" [wheel]=\"${5:true}\" [snap]=\"${6:true}\"",
-      " [rewind]=\"${7:true}\">",
-      "   <ax-carousel-item class=\"ax-h-full\" *ngFor=\"let carouselItem of ${8:_carouselItems}\">",
-      "    <article class=\"ax-flex-col ax-flex ax-items-center\" (click)=\"${9:_handleOnItemClick}(param)\">",
+      "<ax-carousel width=\"${1:100%}\" [centered]=\"${2:false}\" height=\"${3:100%}\" [perMove]=\"${4:1}\" [perPage]=\"${5:1}\" [wheel]=\"${6:true}\" [vertical]=\"${7:false}\" [snap]=\"${8:true}\">",
+      " [rewind]=\"${9:true}\">",
+      "   <ax-carousel-item class=\"ax-h-full\" *ngFor=\"let carouselItem of ${10:_carouselItems}\">",
+      "    <article class=\"ax-flex-col ax-flex ax-items-center\" (click)=\"${11:_handleOnItemClick}(param)\">",
+      "       <div class=\"ax-w-20 ax-h-20 ax-p-2 lg:ax-h-24 lg:ax-w-24 lg:ax-p-3 ax-bg-white ax-flex ax-items-center",
+      "       ax-cursor-pointer ax-justify-center ax-shadow-md ax-rounded-md\">",
+      "       <img width=\"100%\" [src]=\"carouselItem.image\" alt=\"avatar\" />",
+      "       </div>",
+      "       <h5 class=\"ax-font-medium ax-my-2 ax-text-sm ax-block\">{{carouselItem.title}}</h5>",
+      "    </article>",
+      "   </ax-carousel-item>",
+      "   <ax-carousel-pager></ax-carousel-pager>",
+      "</ax-carousel>"
+    ],
+    "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
+  },
+  "ax-carousel-with-arrows": {
+    "prefix": "ax-carousel-with-arrows",
+    "body": [
+      "<ax-carousel width=\"${1:100%}\" [centered]=\"${2:false}\" height=\"${3:100%}\" [perMove]=\"${4:1}\" [perPage]=\"${5:1}\" [wheel]=\"${6:true}\" [vertical]=\"${7:false}\" [snap]=\"${8:true}\">",
+      " [rewind]=\"${9:true}\">",
+      "   <ax-carousel-item class=\"ax-h-full\" *ngFor=\"let carouselItem of ${10:_carouselItems}\">",
+      "    <article class=\"ax-flex-col ax-flex ax-items-center\" (click)=\"${11:_handleOnItemClick}(param)\">",
       "       <div class=\"ax-w-20 ax-h-20 ax-p-2 lg:ax-h-24 lg:ax-w-24 lg:ax-p-3 ax-bg-white ax-flex ax-items-center",
       "       ax-cursor-pointer ax-justify-center ax-shadow-md ax-rounded-md\">",
       "       <img width=\"100%\" [src]=\"carouselItem.image\" alt=\"avatar\" />",
@@ -147,7 +190,16 @@
   "ax-check-box": {
     "prefix": "ax-check-box",
     "body": [
-      "<ax-check-box [value]=\"${1:}\"></ax-check-box>"
+      "<ax-check-box [readonly]=\"${1:false}\" [value]=\"${2:}\"></ax-check-box>"
+    ],
+    "description": "Checkboxes allow the user to select one or more items from a set."
+  },
+  "ax-check-box-with-hint": {
+    "prefix": "ax-check-box-with-hint",
+    "body": [
+      "<ax-check-box [readonly]=\"false\" [value]=\"${1:}\">",
+      "  <ax-form-hint> ${4:// Put your hint here.}</ax-form-hint>",
+      "</ax-check-box>"
     ],
     "description": "Checkboxes allow the user to select one or more items from a set."
   },
