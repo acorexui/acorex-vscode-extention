@@ -369,7 +369,14 @@
   "ax-footer": {
     "prefix": "ax-footer",
     "body": [
-      "<ax-footer></ax-footer>"
+      "<ax-footer>",
+      "   <ax-prefix class=\"ax-w-full\">",
+      "     <ax-button class=\"ax-w-full\" text=\"some text\"></ax-button>",
+      "   </ax-prefix>",
+      "   <ax-suffix class=\"ax-w-full\">",
+      "     <ax-button class=\"ax-w-full\" text=\"some text\"></ax-button>",
+      "   </ax-suffix>",
+      "</ax-footer>"
     ],
     "description": "Adds Footer Seprator to the popup"
   },
