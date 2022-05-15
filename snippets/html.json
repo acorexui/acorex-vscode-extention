@@ -4,6 +4,9 @@
     "body": [
       "<ax-action-sheet caption=\"${1:caption}\">",
       "  <ax-action-sheet-item *ngFor=\"let item of actionItems\" color=\"${2:light}\" [text]=\"${3:item.text}\">",
+      "    <ax-content>",
+      "       ${4:// Add your Action Sheet contents here.}",
+      "    </ax-content>",
       "  </ax-action-sheet-item>",
       "</ax-action-sheet>"
     ],
@@ -13,8 +16,17 @@
     "prefix": "ax-alert",
     "body": [
       "<ax-alert color=\"${1:primary}\">",
-      "   <ax-alert-title>${2:title}</ax-alert-title>",
-      "   <ax-alert-content>${3:content}</ax-alert-content>",
+      "   <ax-header>",
+      "     <ax-icon>",
+      "       ${4:// Put your Icon here.}",
+      "     </ax-icon>",
+      "   </ax-header>",
+      " <ax-content>",
+      "   ${5:// Put your Alert contents here.}",
+      "  </ax-content>",
+      " <ax-suffix>",
+      "   <ax-button text=\"Button\"></ax-button>",
+      " </ax-suffix>",
       "</ax-alert>"
     ],
     "description": "An alert displays a short, important message in a way that attracts the user's attention without interrupting the user's task."
