@@ -18,11 +18,11 @@
       "<ax-alert color=\"${1:primary}\">",
       "   <ax-header>",
       "     <ax-icon>",
-      "       ${4:// Put your Icon here.}",
+      "       ${2:// Put your Icon here.}",
       "     </ax-icon>",
       "   </ax-header>",
       " <ax-content>",
-      "   ${5:// Put your Alert contents here.}",
+      "   ${3:// Put your Alert contents here.}",
       "  </ax-content>",
       " <ax-suffix>",
       "   <ax-button text=\"Button\"></ax-button>",
@@ -34,9 +34,9 @@
   "ax-avatar": {
     "prefix": "ax-avatar",
     "body": [
-      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10  ax-me-1\">",
+      "<ax-avatar type=\"${1:text}\" text=\"${2:Avatar}\" class=\"ax-w-10 ax-h-10  ax-me-1\">",
       "     <ax-icon>",
-      "       ${4:// Put your Avatar here.}",
+      "       ${3:// Put your Avatar here.}",
       "     </ax-icon>",
       "</ax-avatar>"
     ],
@@ -52,10 +52,10 @@
   "ax-badge-prefix-icon": {
     "prefix": "ax-badge-with-prefix-icon",
     "body": [
-      "<ax-badge text=\"Badge with prefix icon\" color=\"danger\" class=\"ax-ms-2\">",
+      "<ax-badge text=\"${1:Badge}\" color=\"danger\" class=\"ax-ms-2\">",
       "   <ax-prefix>",
       "     <ax-content>",
-      "       ${4:// Put your Avatar here.}",
+      "       ${2:// Put your Avatar here.}",
       "     </ax-content>",
       "   </ax-prefix>",
       "</ax-badge>"
@@ -65,10 +65,10 @@
   "ax-badge-suffix-icon": {
     "prefix": "ax-badge-with-suffix-icon",
     "body": [
-      "<ax-badge text=\"Badge with prefix icon\" color=\"danger\" class=\"ax-ms-2\">",
+      "<ax-badge text=\"${1:Badge}\" color=\"danger\" class=\"ax-ms-2\">",
       "   <ax-suffix>",
       "     <ax-content>",
-      "       ${4:// Put your Avatar here.}",
+      "       ${2:// Put your Avatar here.}",
       "     </ax-content>",
       "   </ax-suffix>",
       "</ax-badge>"
@@ -80,9 +80,9 @@
     "body": [
       "<ax-breadcrumbs>",
       "    <ax-breadcrumbs-item text=\"${1:Home}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Product}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${2:Product}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${3:Digitals}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${4:Playstation Plus}\"></ax-breadcrumbs-item>",
       "</ax-breadcrumbs>"
     ],
     "description": "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy."
@@ -97,21 +97,21 @@
   "ax-button-group": {
     "prefix": "ax-button-group",
     "body": [
-      "<ax-button-group color=\"${1:primary}\" look=\"twotone\" (onItemClick)=\"${2:handleOnItemClick($event)}\">",
-      "  <ax-button text=\"${3:Bold}\">",
+      "<ax-button-group color=\"${1:primary}\" look=\"${2:twotone}\" (onItemClick)=\"${3:handleOnItemClick($event)}\">",
+      "  <ax-button text=\"${4:Bold}\">",
       "    <ax-prefix>",
-      "     <ax-icon icon=\"${4:}\"></ax-icon>",
+      "     <ax-icon icon=\"${5:}\"></ax-icon>",
       "    </ax-prefix>",
       "  </ax-button>",
-      "  <ax-button text=\"${3:Italic}\">",
+      "  <ax-button text=\"${6:Italic}\">",
       "   <ax-prefix>",
-      "     <ax-icon icon=\"${6:}\">",
+      "     <ax-icon icon=\"${7:}\">",
       "     </ax-icon>",
       "   </ax-prefix>",
       "  </ax-button>",
-      "  <ax-button text=\"${7:Underline}\">",
+      "  <ax-button text=\"${8:Underline}\">",
       "   <ax-prefix>",
-      "     <ax-icon icon=\"${8:}\"></ax-icon>",
+      "     <ax-icon icon=\"${9:}\"></ax-icon>",
       "   </ax-prefix>",
       "  </ax-button>",
       "</ax-button-group>"
@@ -145,7 +145,7 @@
   "ax-calendar": {
     "prefix": "ax-calendar",
     "body": [
-      "<ax-calendar [min]=\"_minValue\" [max]=\"_maxValue\" (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
+      "<ax-calendar [min]=\"${1:_minValue}\" [max]=\"${2:_maxValue}\" (onValueChanged)=\"${3:handleValueChanged($event)}\"></ax-calendar>"
     ],
     "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
   },
@@ -197,8 +197,8 @@
   "ax-check-box-with-hint": {
     "prefix": "ax-check-box-with-hint",
     "body": [
-      "<ax-check-box [readonly]=\"false\" [value]=\"${1:}\">",
-      "  <ax-form-hint> ${4:// Put your hint here.}</ax-form-hint>",
+      "<ax-check-box [readonly]=\"${1:false}\" [value]=\"${2:}\">",
+      "  <ax-form-hint> ${3:// Put your hint here.}</ax-form-hint>",
       "</ax-check-box>"
     ],
     "description": "Checkboxes allow the user to select one or more items from a set."
@@ -206,7 +206,7 @@
   "ax-collapse": {
     "prefix": "ax-collapse",
     "body": [
-      "<ax-collapse caption=\"${1:panel header}\">  </ax-collapse>"
+      "<ax-collapse caption=\"${1:panel header}\"></ax-collapse>"
     ],
     "description": "A content area which can be collapsed and expanded."
   },
@@ -237,11 +237,11 @@
       "<ax-collapse caption=\"${1:panel header}\">",
       "   <ng-template #header let-isCollapsed>",
       "       <div class=\"ax-p-4 ax-text-center\">",
-      "       ${4:// Put your collapse item here.}",
+      "       ${2:// Put your collapse item here.}",
       "       </div>",
       "   </ng-template>",
       "   <p>",
-      "     ${4:// Put your collapse item here.}",
+      "     ${3:// Put your collapse item here.}",
       "   </p>",
       "</ax-collapse>"
     ],
@@ -251,6 +251,20 @@
     "prefix": "ax-date-picker",
     "body": [
       "<ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" ></ax-date-picker>"
+    ],
+    "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
+  },
+  "ax-date-picker-with-prefix": {
+    "prefix": "ax-date-picker-with-prefix",
+    "body": [
+      "<ax-form-field>",
+      "   <ax-label>Birtday</ax-label>",
+      "   <ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" >",
+      "       <ax-prefix>",
+      "           <ax-button text=\"Today\"></ax-button>",
+      "       </ax-prefix>",
+      "   </ax-date-picker>",
+      "</ax-form-field>",
     ],
     "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
   },
