@@ -210,6 +210,43 @@
     ],
     "description": "A content area which can be collapsed and expanded."
   },
+  "ax-collapse-group": {
+    "prefix": "ax-collapse-group",
+    "body": [
+      "<ax-collapse-group [accordion]=\"${1:false}\" [nonCollapsedIndex]=\"1\">",
+      "    <ax-collapse caption=\"panel header 1\">",
+      "       ${2:// Put your collapse item here.}",
+      "<ax-collapse-group>",
+      "    </ax-collapse>",
+      "<ax-collapse-group>",
+      "    <ax-collapse caption=\"panel header 2\">",
+      "       ${3:// Put your collapse item here.}",
+      "<ax-collapse-group>",
+      "    </ax-collapse>",
+      "<ax-collapse-group>",
+      "    <ax-collapse caption=\"panel header 3\">",
+      "       ${4:// Put your collapse item here.}",
+      "<ax-collapse-group>",
+      "    </ax-collapse>"
+    ],
+    "description": "A content area which can be collapsed and expanded."
+  },
+  "ax-collapse-custom-header": {
+    "prefix": "ax-collapse-custom-header",
+    "body": [
+      "<ax-collapse caption=\"${1:panel header}\">",
+      "   <ng-template #header let-isCollapsed>",
+      "       <div class=\"ax-p-4 ax-text-center\">",
+      "       ${4:// Put your collapse item here.}",
+      "       </div>",
+      "   </ng-template>",
+      "   <p>",
+      "     ${4:// Put your collapse item here.}",
+      "   </p>",
+      "</ax-collapse>"
+    ],
+    "description": "A content area which can be collapsed and expanded."
+  },
   "ax-date-picker": {
     "prefix": "ax-date-picker",
     "body": [
