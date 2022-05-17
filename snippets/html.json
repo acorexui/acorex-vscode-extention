@@ -50,7 +50,7 @@
     "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
   },
   "ax-badge-prefix-icon": {
-    "prefix": "ax-badge-with-prefix-icon",
+    "prefix": "ax-badge-prefix-icon",
     "body": [
       "<ax-badge text=\"${1:Badge}\" color=\"danger\" class=\"ax-ms-2\">",
       "   <ax-prefix>",
@@ -63,7 +63,7 @@
     "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
   },
   "ax-badge-suffix-icon": {
-    "prefix": "ax-badge-with-suffix-icon",
+    "prefix": "ax-badge-suffix-icon",
     "body": [
       "<ax-badge text=\"${1:Badge}\" color=\"danger\" class=\"ax-ms-2\">",
       "   <ax-suffix>",
@@ -119,7 +119,7 @@
     "description": "You can use the Button Group component to group buttons. You can use different modes to group multiple buttons."
   },
   "ax-button-group-multi": {
-    "prefix": "ax-button-group",
+    "prefix": "ax-button-group-multi",
     "body": [
       "<ax-button-group color=\"${1:primary}\" selection=\"${2:multiple\" look=\"${3:twotone\" (onItemClick)=\"${4:handleOnItemClick($event)}\">",
       "  <ax-button text=\"${5:Bold}\">",
@@ -526,7 +526,7 @@
     "description": "create selection-list"
   },
   "ax-selection-card": {
-    "prefix": "ax-selection-separate",
+    "prefix": "ax-selection-card",
     "body": [
       "<ax-selection-list [items]=\"${1:}\" class=\"ax-card-style\"  valueField=\"${2:}\" disabled=\"${3:false}\" [multiple]=\"${4:true}\" textField=\"${5:}\" readonly=\"${6:false}\" [direction]=\"${7:'horizontal'}\"></ax-selection-list>"
     ],
