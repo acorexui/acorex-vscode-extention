@@ -774,7 +774,7 @@
     "description": "A view that switches between multiple child views using interactive user interface elements."
   },
   "ax-tabs-pills": {
-    "prefix": "ax-tabs",
+    "prefix": "ax-tabs-pills",
     "body": [
       "<ax-tabs class=\"ax-look-pills ax-tabs-fit ax-w-full\">",
       "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
@@ -783,7 +783,7 @@
     "description": "A view that switches between multiple child views using interactive user interface elements."
   },
   "ax-tabs-pills-color": {
-    "prefix": "ax-tabs",
+    "prefix": "ax-tabs-pills-color",
     "body": [
       "<ax-tabs class=\"ax-look-pills-color ax-tabs-fit ax-w-full\">",
       "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
@@ -792,7 +792,7 @@
     "description": "A view that switches between multiple child views using interactive user interface elements."
   },
   "ax-tabs-start-line": {
-    "prefix": "ax-tabs",
+    "prefix": "ax-tabs-start-line",
     "body": [
       "<ax-tabs class=\"ax-look-start-line ax-tabs-fit ax-w-full\">",
       "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
@@ -801,7 +801,7 @@
     "description": "A view that switches between multiple child views using interactive user interface elements."
   },
   "ax-tabs-end-line": {
-    "prefix": "ax-tabs",
+    "prefix": "ax-tabs-end-line",
     "body": [
       "<ax-tabs class=\"ax-look-end-line ax-tabs-fit ax-w-full\">",
       "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
