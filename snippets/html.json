@@ -121,7 +121,7 @@
   "ax-button-group-multi": {
     "prefix": "ax-button-group-multi",
     "body": [
-      "<ax-button-group color=\"${1:primary}\" selection=\"${2:multiple\" look=\"${3:twotone\" (onItemClick)=\"${4:handleOnItemClick($event)}\">",
+      "<ax-button-group color=\"${1:primary}\" look=\"${2:twotone\" selection=\"${3:multiple\" (onItemClick)=\"${4:handleOnItemClick($event)}\">",
       "  <ax-button text=\"${5:Bold}\">",
       "    <ax-prefix>",
       "     <ax-icon icon=\"${6:}\"></ax-icon>",
@@ -250,7 +250,7 @@
   "ax-date-picker": {
     "prefix": "ax-date-picker",
     "body": [
-      "<ax-date-picker type=\"${1:jalali} format=\"${2:MMM / YYYY -  dd}\" [value]=\"${3:}\" \"></ax-date-picker>"
+      "<ax-date-picker type=\"${1:jalali}\" format=\"${2:MMM / YYYY -  dd}\" [value]=\"${3:}\" ></ax-date-picker>"
     ],
     "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
   },
@@ -278,7 +278,7 @@
       "        <ax-icon icon=\"${5:}\"></ax-icon>",
       "       </ax-prefix>",
       "     </ax-button-item>",
-      "     <ax-button-item text=\"${6:}\" color=\"${7:}\" name=\"${8:}\">",
+      "     <ax-button-item text=\"${6:}\" color=\"${7:primary}\" name=\"${8:}\">",
       "       <ax-prefix>",
       "       <ax-icon icon=\"${9:}\"></ax-icon>",
       "       </ax-prefix>",
@@ -294,7 +294,7 @@
   "ax-menu": {
     "prefix": "ax-menu",
     "body": [
-      "<ax-menu [textField]=\"'${1:}'\"  [items]=\"${2:}\" direction=\"${3:vertical}\" [hasChildField]=\"'${4:}'\"  [icon]=\"'${5:}'\" [disableField]=\"'${6:}'\" (onMenuItemClick)=\"${7:onMenuItemClick($event)}\"></ax-menu>"
+      "<ax-menu [textField]=\"'${1:}'\" [items]=\"${2:}\" direction=\"${3:vertical}\" [hasChildField]=\"'${4:}'\"  [icon]=\"'${5:}'\" [disableField]=\"'${6:}'\" (onMenuItemClick)=\"${7:onMenuItemClick($event)}\"></ax-menu>"
     ],
     "description": "create menu"
   },
@@ -450,7 +450,7 @@
   "ax-number-box": {
     "prefix": "ax-number-box",
     "body": [
-      " <ax-number-box placeholder=\"Enter a number\" readonly=\"false\" [decimals]=\"${1:}\"  allowNull=\"${2:}\" [minValue]=\"${3:}\" [maxValue]=\"${4:}\"  [thousandsSeparator]=\"${5:}\" [(value)]=\"${5:}\"[padDecimalZeros]=\"${6:}\"></ax-number-box>"
+      " <ax-number-box placeholder=\"Enter a number\" [readonly]=\"false\" [decimals]=\"${1:}\"  allowNull=\"${2:}\" [minValue]=\"${3:}\" [maxValue]=\"${4:}\"  [thousandsSeparator]=\"${5:}\" [(value)]=\"${5:}\"[padDecimalZeros]=\"${6:}\"></ax-number-box>"
     ],
     "description": "create number-box"
   },
@@ -585,21 +585,21 @@
   "ax-selection-list": {
     "prefix": "ax-selection-list",
     "body": [
-      "<ax-selection-list  [items]=\"${1:}\" valueField=\"${2:}\" [multiple]=\"${3:false}\" disabled=\"${4:false}\" readonly=\"${5:false}\" textField=\"${6:}\" [direction]=\"${7:'horizontal'}\"></ax-selection-list>"
+      "<ax-selection-list  [items]=\"${1:}\" valueField=\"${2:}\" [multiple]=\"${3:false}\" disabled=\"${4:false}\" [readonly]=\"${5:false}\" textField=\"${6:}\" [direction]=\"${7:'horizontal'}\"></ax-selection-list>"
     ],
     "description": "create selection-list"
   },
   "ax-selection-separate": {
     "prefix": "ax-selection-separate",
     "body": [
-      "<ax-selection-list [items]=\"${1:}\" class=\"ax-separate-style\" disabled=\"${2:false}\" valueField=\"${3:}\" readonly=\"${4:false}\" [multiple]=\"${5:false}\" textField=\"${6:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
+      "<ax-selection-list [items]=\"${1:}\" class=\"ax-separate-style\" [disabled]=\"${2:false}\" valueField=\"${3:}\" [readonly]=\"${4:false}\" [multiple]=\"${5:false}\" textField=\"${6:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
     ],
     "description": "create selection-list"
   },
   "ax-selection-card": {
     "prefix": "ax-selection-card",
     "body": [
-      "<ax-selection-list [items]=\"${1:}\" class=\"ax-card-style\"  valueField=\"${2:}\" disabled=\"${3:false}\" [multiple]=\"${4:true}\" textField=\"${5:}\" readonly=\"${6:false}\" [direction]=\"${7:'horizontal'}\"></ax-selection-list>"
+      "<ax-selection-list [items]=\"${1:}\" class=\"ax-card-style\"  valueField=\"${2:}\" [disabled]=\"${3:false}\" [multiple]=\"${4:true}\" textField=\"${5:}\" [readonly]=\"${6:false}\" [direction]=\"${7:'horizontal'}\"></ax-selection-list>"
     ],
     "description": "create selection-list"
   },
@@ -941,14 +941,14 @@
   "ax-text-box": {
     "prefix": "ax-text-box",
     "body": [
-      "<ax-text-box readonly=\"${1:false}\" disabled=\"${2:false}\" placeholder=\"${3:Enter your nmae}\" [value]=\"'${4:John Doe}'\"></ax-text-box>"
+      "<ax-text-box [readonly]=\"${1:false}\" [disabled]=\"${2:false}\" placeholder=\"${3:Enter your nmae}\" [value]=\"'${4:John Doe}'\"></ax-text-box>"
     ],
     "description": "create text-box"
   },
   "ax-text-box-prefix": {
     "prefix": "ax-text-box-prefix",
     "body": [
-      "<ax-text-box value=\"${1:PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc}\" readonly=\"${2:false}\">",
+      "<ax-text-box value=\"${1:PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc}\" [readonly]=\"${2:false}\">",
       "   <ax-prefix>",
       "     <ax-button text=\"${3:copy}\" color=\"${4:info}\">",
       "        <ax-prefix>",
@@ -965,7 +965,7 @@
   "ax-text-box-suffix": {
     "prefix": "ax-text-box-suffix",
     "body": [
-      "<ax-text-box value=\"${1:PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc}\" readonly=\"${2:false}\">",
+      "<ax-text-box value=\"${1:PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc}\" [readonly]=\"${2:false}\">",
       "   <ax-suffix>",
       "     <ax-button text=\"${3:copy}\" color=\"${4:info}\">",
       "        <ax-prefix>",
