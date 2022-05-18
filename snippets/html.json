@@ -94,6 +94,13 @@
     ],
     "description": "Button Component is used to trigger an action or event, submitting forms, opening dialog boxes, and other porpuses in different sizes and looks."
   },
+  "ax-button-icon-fa": {
+    "prefix": "ax-button-icon-fa",
+    "body": [
+      "<ax-button class=\"${1:fa-brands fa-instagram}\" color=\"${2:dark}\" text=\"${3:Button}\"></ax-button>"
+    ],
+    "description": "Button Component is used to trigger an action or event, submitting forms, opening dialog boxes, and other porpuses in different sizes and looks."
+  },
   "ax-button-group": {
     "prefix": "ax-button-group",
     "body": [
@@ -559,14 +566,14 @@
   "ax-select-box": {
     "prefix": "ax-select-box",
     "body": [
-      "<ax-select-box [items]=\"${1:}\" [disabledCallback]=\"_isItemDisabled\" textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\" [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"_handleOnValueChange($event)\"></ax-select-box>"
+      "<ax-select-box [items]=\"${1:}\" [disabledCallback]=\"_isItemDisabled\" textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\" [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"your Function\"></ax-select-box>"
     ],
     "description": "create select-box"
   },
   "ax-select-box-lazy": {
     "prefix": "ax-select-box-lazy",
     "body": [
-      "<ax-select-box [items]=\"${1:_selectBoxData}\" [disabledCallback]=\"${2:_isItemDisabled}\" [pageSize]=\"${3:10}\" textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\" [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"_handleOnValueChange($event)\"></ax-select-box>"
+      "<ax-select-box [items]=\"${1:_selectBoxData}\" [disabledCallback]=\"${2:_isItemDisabled}\" [pageSize]=\"${3:10}\" textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\" [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"your Function\"></ax-select-box>"
     ],
     "description": "create select-box"
   },
@@ -1061,7 +1068,7 @@
   "ax-icon-in-button": {
     "prefix": "ax-icon-in-button",
     "body": [
-      "<ax-button class=\"ax-sm\" look=\"${1:blank}\" (onClick)=\"${2:onButtonClick}\">",
+      "<ax-button class=\"ax-sm\" look=\"${1:blank}\" (onClick)=\"${2:functionName()}\">",
       "   <ax-prefix>",
       "     <ax-icon>",
       "       ${3:// Put your Icon here.}",
@@ -1074,7 +1081,7 @@
   "ax-loading-in-button": {
     "prefix": "ax-loading-in-button",
     "body": [
-      "<ax-button class=\"ax-sm\" look=\"${1:blank}\" (onClick)=\"${2:onButtonClick}\">",
+      "<ax-button class=\"ax-sm\" look=\"${1:blank}\" (onClick)=\"${2:functionName()}\">",
       "  <ax-loading *ngIf=\"${3:isLoading}\"></ax-loading>",
       "</ax-button>"
     ],
