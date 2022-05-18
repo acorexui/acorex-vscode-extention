@@ -946,7 +946,7 @@
     "description": "create text-box"
   },
   "ax-text-box-prefix": {
-    "prefix": "ax-text-box",
+    "prefix": "ax-text-box-prefix",
     "body": [
       "<ax-text-box value=\"${1:PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc}\" readonly=\"${2:false}\">",
       "   <ax-prefix>",
