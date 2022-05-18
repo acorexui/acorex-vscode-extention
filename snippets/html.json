@@ -45,14 +45,14 @@
   "ax-badge": {
     "prefix": "ax-badge",
     "body": [
-      "<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"
+      "<ax-badge text=\"${1:Badge}\" color=\"${2:danger}\"></ax-badge>"
     ],
     "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
   },
   "ax-badge-prefix-icon": {
     "prefix": "ax-badge-prefix-icon",
     "body": [
-      "<ax-badge text=\"${1:Badge}\" color=\"danger\" class=\"ax-ms-2\">",
+      "<ax-badge text=\"${1:Badge}\" color=\"${2:danger}\" class=\"ax-ms-2\">",
       "   <ax-prefix>",
       "     <ax-content>",
       "       ${2:// Put your Avatar here.}",
@@ -65,10 +65,10 @@
   "ax-badge-suffix-icon": {
     "prefix": "ax-badge-suffix-icon",
     "body": [
-      "<ax-badge text=\"${1:Badge}\" color=\"danger\" class=\"ax-ms-2\">",
+      "<ax-badge text=\"${1:Badge}\" color=\"${2:danger}\" class=\"ax-ms-2\">",
       "   <ax-suffix>",
       "     <ax-content>",
-      "       ${2:// Put your Avatar here.}",
+      "       ${3:// Put your Avatar here.}",
       "     </ax-content>",
       "   </ax-suffix>",
       "</ax-badge>"
@@ -240,9 +240,9 @@
       "       ${2:// Put your collapse item here.}",
       "       </div>",
       "   </ng-template>",
-      "   <p>",
-      "     ${3:// Put your collapse item here.}",
-      "   </p>",
+      "       <p>",
+      "         ${3:// Put your collapse item here.}",
+      "       </p>",
       "</ax-collapse>"
     ],
     "description": "A content area which can be collapsed and expanded."
@@ -250,7 +250,7 @@
   "ax-date-picker": {
     "prefix": "ax-date-picker",
     "body": [
-      "<ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" type=\"jalali\"></ax-date-picker>"
+      "<ax-date-picker type=\"${1:jalali} format=\"${2:MMM / YYYY -  dd}\" [value]=\"${3:}\" \"></ax-date-picker>"
     ],
     "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
   },
@@ -259,7 +259,7 @@
     "body": [
       "<ax-form-field>",
       "   <ax-label>Birtday</ax-label>",
-      "   <ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" >",
+      "   <ax-date-picker type=\"${1:jalali}\" format=\"${2:MMM / YYYY -  dd}\" [value]=\"${3:}\" >",
       "       <ax-prefix>",
       "           <ax-button text=\"Today\"></ax-button>",
       "       </ax-prefix>",
@@ -499,12 +499,7 @@
       "     <ax-button color=\"${4:dark}\" text=\"${5:Return to the panel}\" class=\"ax-mx-auto\">",
       "         <ax-prefix>",
       "             <ax-icon>",
-      "                 <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\"",
-      "                 viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\">",
-      "                 <path stroke-linecap=\"round\" stroke-linejoin=\"round",
-      "                 d=\"M10 19l-7-7m0 0l7-7m-7 7h18\" />",
-      "                 </svg>",
-      "             </ax-icon>",
+      "               ${6:// Put your Icon here.}",
       "         </ax-prefix>",
       "     </ax-button>",
       "   </div>",
@@ -516,7 +511,7 @@
     "prefix": "ax-result-custom-image",
     "body": [
       "<ax-result type=\"${1:custom-image}\" caption=\"${2:Custom Image}\" description=\"${3:Lorem ipsum dolor sit amet}\">",
-      "   <img src=\"${4:https://picsum.photos/seed/picsum/300/300}\" alt=\"picsum.photos\" >",
+      "   <img src=\"${4:https://picsum.photos/seed/picsum/300/300}\" alt=\"${5:picsum.photos}\" >",
       "</ax-result>"
     ],
     "description": "create result"
@@ -524,7 +519,7 @@
   "ax-result-warning": {
     "prefix": "ax-result-warning",
     "body": [
-      "<ax-result type=\"warning\" caption=\"Your information will be lost\" description=\"If you do this, your data will be completely lost\">",
+      "<ax-result type=\"${1:warning}\" caption=\"${2:Your information will be lost}\" description=\"${3:If you do this, your data will be completely lost}\">",
       "    <div class=\"ax-grid ax-gap-3 ax-grid-cols-2 ax-w-1/2 ax-mx-auto\">",
       "    <ax-button class=\"ax-col-span-1\" color=\"warning\" text=\"I'm sure\"></ax-button>",
       "    <ax-button class=\"ax-col-span-1\" color=\"light\" text=\"Cancel\"></ax-button>",
@@ -538,7 +533,7 @@
     "body": [
       "<div class=\"ax-rating-container\" #stars>",
       "   <ng-container *ngFor=\"let star of stars\">",
-      "       <span class=\"ax-rating-start ax-ic-star-outline ax-text-2xl\" (click)=\"handleStarClick(item)\"></span>",
+      "       <span class=\"ax-rating-start ax-ic-star-outline ax-text-2xl\" (click)=\"handleRatingClick(item)\"></span>",
       "   </ng-container>",
       "</div>"
     ],
@@ -564,14 +559,14 @@
   "ax-select-box": {
     "prefix": "ax-select-box",
     "body": [
-      "<ax-select-box [items]=\"${1:}\" [disabledCallback]=\"_isItemDisabled\" textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\"  [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"_handleOnValueChange($event)\"></ax-select-box>"
+      "<ax-select-box [items]=\"${1:}\" [disabledCallback]=\"_isItemDisabled\" textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\" [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"_handleOnValueChange($event)\"></ax-select-box>"
     ],
     "description": "create select-box"
   },
   "ax-select-box-lazy": {
     "prefix": "ax-select-box-lazy",
     "body": [
-      "<ax-select-box [items]=\"${1:}\" [disabledCallback]=\"_isItemDisabled\" [pageSize]=\"10\"  textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\"  [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"_handleOnValueChange($event)\"></ax-select-box>"
+      "<ax-select-box [items]=\"${1:_selectBoxData}\" [disabledCallback]=\"${2:_isItemDisabled}\" [pageSize]=\"${3:10}\" textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\" [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"  selectionMode=\"${9:item}\" (onValueChanged)=\"_handleOnValueChange($event)\"></ax-select-box>"
     ],
     "description": "create select-box"
   },
@@ -580,8 +575,8 @@
     "body": [
       "<ax-form-field>",
       "   <ax-label>Country</ax-label>",
-      "     <ax-select-box [items]=\"_provideSearchData\" placeholder=\"${1:a placeholder}\" textField=\"${1:a text field}\"",
-      "     [searchSettings]=\"{enabled: true}\" valueField=\"id\">",
+      "     <ax-select-box [items]=\"${1:_selectBoxData}\" placeholder=\"${2:a placeholder}\" textField=\"${3:a text field}\"",
+      "     [searchSettings]=\"${4:{enabled: true}}\" valueField=\"${5:id}\">",
       "     </ax-select-box>",
       "</ax-form-field>"
     ],
@@ -597,7 +592,7 @@
   "ax-selection-separate": {
     "prefix": "ax-selection-separate",
     "body": [
-      "<ax-selection-list  [items]=\"${1:}\" class=\"ax-separate-style\" disabled=\"${2:false}\" valueField=\"${3:}\" readonly=\"${4:false}\" [multiple]=\"${5:false}\" textField=\"${6:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
+      "<ax-selection-list [items]=\"${1:}\" class=\"ax-separate-style\" disabled=\"${2:false}\" valueField=\"${3:}\" readonly=\"${4:false}\" [multiple]=\"${5:false}\" textField=\"${6:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
     ],
     "description": "create selection-list"
   },
@@ -612,11 +607,11 @@
     "prefix": "ax-skelton",
     "body": [
       "<div class=\"ax-flex\">",
-      " <div class=\"ax-block ax-w-28 ax-h-28 ax-skeleton\"></div>",
+      " <div class=\"ax-block ax-w-28 ax-h-28 ${1:ax-skeleton}\"></div>",
       " <div class=\"ax-ms-3\">",
-      "     <div class=\"ax-block ax-w-60 ax-h-8 ax-skeleton\"></div>",
-      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ax-skeleton\"></div>",
-      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ax-skeleton\"></div>",
+      "     <div class=\"ax-block ax-w-60 ax-h-8 ${1:ax-skeleton}\"></div>",
+      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ${1:ax-skeleton}\"></div>",
+      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ${1:ax-skeleton}\"></div>",
       " </div>",
       "</div>"
     ],
@@ -626,11 +621,11 @@
     "prefix": "ax-skelton-animation",
     "body": [
       "<div class=\"ax-flex\">",
-      " <div class=\"ax-block ax-w-28 ax-h-28 ax-skeleton-animate\"></div>",
+      " <div class=\"ax-block ax-w-28 ax-h-28 ${1:ax-skeleton-animate}\"></div>",
       " <div class=\"ax-ms-3\">",
-      "     <div class=\"ax-block ax-w-60 ax-h-8 ax-skeleton-animate\"></div>",
-      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ax-skeleton-animate\"></div>",
-      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ax-skeleton-animate\"></div>",
+      "     <div class=\"ax-block ax-w-60 ax-h-8 ${1:ax-skeleton-animate}\"></div>",
+      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ${1:ax-skeleton-animate}\"></div>",
+      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ${1:ax-skeleton-animate}\"></div>",
       " </div>",
       "</div>"
     ],
@@ -639,93 +634,82 @@
   "ax-switch-primary": {
     "prefix": "ax-switch-primary",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-primary ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${3:false}\" class=\"ax-primary ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-secondary": {
     "prefix": "ax-switch-secondary",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-secondary ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${2:false}\" class=\"ax-secondary ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-success": {
     "prefix": "ax-switch-success",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-success ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${1:false}\" class=\"ax-success ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-warning": {
     "prefix": "ax-switch-warning",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-warning ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${2:false}\" class=\"ax-warning ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-danger": {
     "prefix": "ax-switch-danger",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-danger ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${2:false}\" class=\"ax-danger ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-info": {
     "prefix": "ax-switch-info",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-info ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${2:false}\" class=\"ax-info ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-dark": {
     "prefix": "ax-switch-dark",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-dark ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${2:false}\" class=\"ax-dark ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-light": {
     "prefix": "ax-switch-light",
     "body": [
-      "<ax-switch [loading]=\"false\" [disabled]=\"false\" class=\"ax-light ax-sm ax-me-2\"  [value]=\"${1:}\"></ax-switch>"
+      "<ax-switch [loading]=\"${1:false}\" [disabled]=\"${2:false}\" class=\"ax-light ax-sm ax-me-2\"  [value]=\"${3:}\"></ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-prefix": {
     "prefix": "ax-switch-prefix",
     "body": [
-      "<div class=\"ax-flex\">",
-      "   <ax-switch [value]=\"true\" class=\"ax-me-2 ax-block\">",
+      "   <ax-switch [value]=\"${1:true}\" class=\"ax-me-2 ax-block\">",
       "     <ax-prefix>",
       "       <ax-content>",
-      "         <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-4 ax-w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">",
-      "             <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"",
-      "                 d=\"M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.",
-      "                 707M16 12a4 4 0 11-8 0 4 4 0 018 0z\" />",
-      "         </svg>",
+      "        ${2:// Put your Icon here.}",
       "       </ax-content>",
       "     </ax-prefix>",
-      "   </ax-switch>",
-      "</div>"
+      "   </ax-switch>"
     ],
     "description": "create switch"
   },
   "ax-switch-suffix": {
     "prefix": "ax-switch-suffix",
     "body": [
-      "<div class=\"ax-flex\">",
-      "   <ax-switch [value]=\"true\" class=\"ax-me-2 ax-block\">",
+      "   <ax-switch [value]=\"${1:true}\" class=\"ax-me-2 ax-block\">",
       "     <ax-suffix>",
       "       <ax-content>",
-      "         <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-4 ax-w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">",
-      "             <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M20.354 15.354A9 9 0 018.646 3.646 9.003 9.",
-      "              003 0 0012 21a9.003 9.003 0 008.354-5.646z\" />",
-      "         </svg>",
+      "       ${2:// Put your Icon here.}",
       "       </ax-content>",
       "     </ax-suffix>",
-      "   </ax-switch>",
-      "</div>"
+      "   </ax-switch>"
     ],
     "description": "create switch"
   },
@@ -844,7 +828,7 @@
     "prefix": "ax-tabs",
     "body": [
       "<ax-tabs class=\"ax-look-default ax-tabs-fit ax-w-full\">",
-      "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      "   <ax-tab-item [disabled]=\"${1:false}\" text=\"${2:tabName1}\" (activeChange)=\"${3:_handleActiveChange1($event)}\"></ax-tab-item>",
       "</ax-tabs>"
     ],
     "description": "A view that switches between multiple child views using interactive user interface elements."
@@ -853,7 +837,7 @@
     "prefix": "ax-tabs-pills",
     "body": [
       "<ax-tabs class=\"ax-look-pills ax-tabs-fit ax-w-full\">",
-      "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      "   <ax-tab-item [disabled]=\"${1:false}\" text=\"${2:tabName1}\" (activeChange)=\"${3:_handleActiveChange1($event)}\"></ax-tab-item>",
       "</ax-tabs>"
     ],
     "description": "A view that switches between multiple child views using interactive user interface elements."
@@ -862,7 +846,7 @@
     "prefix": "ax-tabs-pills-color",
     "body": [
       "<ax-tabs class=\"ax-look-pills-color ax-tabs-fit ax-w-full\">",
-      "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      "   <ax-tab-item [disabled]=\"${1:false}\" text=\"${2:tabName1}\" (activeChange)=\"${3:_handleActiveChange1($event)}\"></ax-tab-item>",
       "</ax-tabs>"
     ],
     "description": "A view that switches between multiple child views using interactive user interface elements."
@@ -871,7 +855,7 @@
     "prefix": "ax-tabs-start-line",
     "body": [
       "<ax-tabs class=\"ax-look-start-line ax-tabs-fit ax-w-full\">",
-      "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      "   <ax-tab-item [disabled]=\"${1:false}\" text=\"${2:tabName1}\" (activeChange)=\"${3:_handleActiveChange1($event)}\"></ax-tab-item>",
       "</ax-tabs>"
     ],
     "description": "A view that switches between multiple child views using interactive user interface elements."
@@ -880,7 +864,7 @@
     "prefix": "ax-tabs-end-line",
     "body": [
       "<ax-tabs class=\"ax-look-end-line ax-tabs-fit ax-w-full\">",
-      "   <ax-tab-item [disabled]=\"false\" text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      "   <ax-tab-item [disabled]=\"${1:false}\" text=\"${2:tabName1}\" (activeChange)=\"${3:_handleActiveChange1($event)}\"></ax-tab-item>",
       "</ax-tabs>"
     ],
     "description": "A view that switches between multiple child views using interactive user interface elements."
@@ -908,7 +892,7 @@
     "prefix": "ax-tabs-decoration",
     "body": [
       "<ax-tabs class=\"ax-look-end-line\">",
-      "   <ax-tab-item text=\"With Icon\" [disabled]=\"false\">",
+      "   <ax-tab-item text=\"${1:With Icon}\" [disabled]=\"${2:false}\">",
       "     <ax-prefix>",
       "       <ax-icon icon=\"far fa-calendar\"></ax-icon>",
       "     </ax-prefix>",
@@ -929,9 +913,9 @@
     "body": [
       "<div #demo5>",
       "   <div class=\"ax-p-3\">",
-      "       <ax-tabs [content]=\"cons\" class=\"ax-look-start-line ax-mb-3 ax-vertical\"",
-      "       (onActiveTabChanged)=\"_handleActiveTabChanged(demo5,$event)\">",
-      "       <ax-tab-item text=\"Tab1\" key=\"tab1\">",
+      "       <ax-tabs [content]=\"${1:contentsArray}\" class=\"ax-look-start-line ax-mb-3 ax-vertical\"",
+      "       (onActiveTabChanged)=\"${2:_handleActiveTabChanged()}\">",
+      "       <ax-tab-item text=\"${3:Tab1}\" key=\"${4:tab1}\">",
       "       <ax-content>",
       "           <ax-text-box placeholder=\"content 1\"></ax-text-box>",
       "       </ax-content>",
@@ -957,24 +941,19 @@
   "ax-text-box": {
     "prefix": "ax-text-box",
     "body": [
-      "<ax-text-box readonly=\"false\" disabled=\"false\" placeholder=\"Enter your name\" [value]=\"'John Doe'\"></ax-text-box>"
+      "<ax-text-box readonly=\"${1:false}\" disabled=\"${2:false}\" placeholder=\"${3:Enter your nmae}\" [value]=\"'${4:John Doe}'\"></ax-text-box>"
     ],
     "description": "create text-box"
   },
   "ax-text-box-prefix": {
     "prefix": "ax-text-box",
     "body": [
-      "<ax-text-box value=\"PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc\" readonly=\"true\">",
+      "<ax-text-box value=\"${1:PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc}\" readonly=\"${2:false}\">",
       "   <ax-prefix>",
-      "     <ax-button text=\"Copy\" color=\"info\">",
+      "     <ax-button text=\"${3:copy}\" color=\"${4:info}\">",
       "        <ax-prefix>",
       "          <ax-icon>",
-      "           <svg xmlns=\"http: //www.w3.org/2000/svg\" class=\"ax-h-5 ax-w-5\" fill=\"none\"",
-      "          viewBox=\"0 0 24 24\" stroke=\"currentColor\">",
-      "          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"",
-      "           d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0",
-      "          002-2M9 5a2 2 0 012-2h2a2 2 0 012 2\" />",
-      "           </svg>",
+      "             ${5:// Put your Icon here.}",
       "         </ax-icon>",
       "       </ax-prefix>",
       "     </ax-button>",
@@ -986,17 +965,12 @@
   "ax-text-box-suffix": {
     "prefix": "ax-text-box-suffix",
     "body": [
-      "<ax-text-box value=\"PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc\" readonly=\"true\">",
+      "<ax-text-box value=\"${1:PBJdFXMLFITn7jULxHIwIR8GiRhZ3uHIUgKp2mYvTIIQPqqc}\" readonly=\"${2:false}\">",
       "   <ax-suffix>",
-      "     <ax-button text=\"Copy\" color=\"info\">",
+      "     <ax-button text=\"${3:copy}\" color=\"${4:info}\">",
       "        <ax-prefix>",
       "          <ax-icon>",
-      "           <svg xmlns=\"http: //www.w3.org/2000/svg\" class=\"ax-h-5 ax-w-5\" fill=\"none\"",
-      "          viewBox=\"0 0 24 24\" stroke=\"currentColor\">",
-      "          <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"",
-      "           d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0",
-      "          002-2M9 5a2 2 0 012-2h2a2 2 0 012 2\" />",
-      "           </svg>",
+      "              ${3:// Put your Icon here.}",
       "         </ax-icon>",
       "       </ax-prefix>",
       "     </ax-button>",
@@ -1010,8 +984,8 @@
     "body": [
       "<ax-form-field>",
       "   <ax-label>Phone Number</ax-label>",
-      "     <ax-text-box placeholder=\"(000) 000-0000\">",
-      "         <ax-input-mask mask=\"(000) 000-0000\"></ax-input-mask>",
+      "     <ax-text-box placeholder=\"${1:(000) 000-0000}\">",
+      "         <ax-input-mask mask=\"${2:(000) 000-0000}\"></ax-input-mask>",
       "     </ax-text-box>",
       "</ax-form-field>"
     ],
@@ -1028,7 +1002,7 @@
     "prefix": "ax-loading",
     "body": [
       "<ax-button  color=\"primary\" class=\"ax-w-full\" [text]=\"some text\" [disabled]=\"isLoading\">",
-      "<ax-loading *ngIf=\"isLoading\"></ax-loading>",
+      "   <ax-loading *ngIf=\"isLoading\"></ax-loading>",
       "</ax-button>"
     ],
     "description": "create text-box"
@@ -1043,7 +1017,7 @@
   "ax-textarea": {
     "prefix": "ax-textarea",
     "body": [
-      "<ax-textarea></ax-textarea>"
+      "<ax-textarea [rows]=\"${1:5}\" [(value)]=\"${3:_textAreaText}\"></ax-textarea>"
     ],
     "description": "The ax-textarea tag defines a multi-line text input control."
   },
@@ -1079,12 +1053,7 @@
     "prefix": "ax-icon",
     "body": [
       "     <ax-icon>",
-      "       <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\" viewBox=\"0 0 24 24\"",
-      "       stroke=\"currentColor\" stroke-width=\"2\">",
-      "       <path stroke-linecap=\"round\" stroke-linejoin=\"round",
-      "       d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2",
-      "       0 002 2z\" />",
-      "       </svg>",
+      "       ${1:// Put your Icon here.}",
       "     </ax-icon>"
     ],
     "description": "add svg icon"
@@ -1092,15 +1061,10 @@
   "ax-icon-in-button": {
     "prefix": "ax-icon-in-button",
     "body": [
-      "<ax-button class=\"ax-sm\" look=\"blank\" (onClick)=\"_onButtoClick\">",
+      "<ax-button class=\"ax-sm\" look=\"${1:blank}\" (onClick)=\"${2:onButtonClick}\">",
       "   <ax-prefix>",
       "     <ax-icon>",
-      "       <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\" viewBox=\"0 0 24 24\"",
-      "       stroke=\"currentColor\" stroke-width=\"2\">",
-      "       <path stroke-linecap=\"round\" stroke-linejoin=\"round",
-      "       d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2",
-      "       0 002 2z\" />",
-      "       </svg>",
+      "       ${3:// Put your Icon here.}",
       "     </ax-icon>",
       "   </ax-prefix>",
       "</ax-button>"
@@ -1110,8 +1074,8 @@
   "ax-loading-in-button": {
     "prefix": "ax-loading-in-button",
     "body": [
-      "<ax-button class=\"ax-sm\" look=\"blank\" (onClick)=\"_onButtoClick\">",
-      "  <ax-loading *ngIf=\"loading\"></ax-loading>",
+      "<ax-button class=\"ax-sm\" look=\"${1:blank}\" (onClick)=\"${2:onButtonClick}\">",
+      "  <ax-loading *ngIf=\"${3:isLoading}\"></ax-loading>",
       "</ax-button>"
     ],
     "description": "add loading inside button"
