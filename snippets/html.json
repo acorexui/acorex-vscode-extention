@@ -970,7 +970,7 @@
       "     <ax-button text=\"${3:copy}\" color=\"${4:info}\">",
       "        <ax-prefix>",
       "          <ax-icon>",
-      "              ${3:// Put your Icon here.}",
+      "              ${5:// Put your Icon here.}",
       "         </ax-icon>",
       "       </ax-prefix>",
       "     </ax-button>",
