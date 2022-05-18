@@ -97,7 +97,7 @@
   "ax-button-icon-fa": {
     "prefix": "ax-button-icon-fa",
     "body": [
-      "<ax-button class=\"${1:fa-brands fa-instagram}\" color=\"${2:dark}\" text=\"${3:Button}\"></ax-button>"
+      "<ax-button class=\"${1:fa-brands fa-instagram}\" color=\"${2:light}\" text=\"${3:Button}\"></ax-button>"
     ],
     "description": "Button Component is used to trigger an action or event, submitting forms, opening dialog boxes, and other porpuses in different sizes and looks."
   },
@@ -528,8 +528,8 @@
     "body": [
       "<ax-result type=\"${1:warning}\" caption=\"${2:Your information will be lost}\" description=\"${3:If you do this, your data will be completely lost}\">",
       "    <div class=\"ax-grid ax-gap-3 ax-grid-cols-2 ax-w-1/2 ax-mx-auto\">",
-      "    <ax-button class=\"ax-col-span-1\" color=\"warning\" text=\"I'm sure\"></ax-button>",
-      "    <ax-button class=\"ax-col-span-1\" color=\"light\" text=\"Cancel\"></ax-button>",
+      "       <ax-button class=\"ax-col-span-1\" color=\"warning\" text=\"I'm sure\"></ax-button>",
+      "       <ax-button class=\"ax-col-span-1\" color=\"light\" text=\"Cancel\"></ax-button>",
       "    </div>",
       "</ax-result>"
     ],
