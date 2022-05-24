@@ -378,8 +378,8 @@
     ],
     "description": "A Form shows a set of related fields in a structured way with validation feature."
   },
-  "ax-form-group": {
-    "prefix": "ax-form-group",
+  "ax-form-set": {
+    "prefix": "ax-form-set",
     "body": [
       "<ax-form #form>",
       "     <div class=\"ax-grid ax-gap-2\">",
