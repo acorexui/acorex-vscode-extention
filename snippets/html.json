@@ -1,37 +1,23 @@
 {
-  "ax-action-sheet": {
-    "prefix": "ax-action-sheet",
-    "body": [
-      "<ax-action-sheet caption=\"${1:caption}\">",
-      "  <ax-action-sheet-item *ngFor=\"let item of actionItems\" color=\"${2:light}\" [text]=\"${3:item.text}\">",
-      "  </ax-action-sheet-item>",
-      "</ax-action-sheet>"
-    ],
-    "description": "Avatars can be used to represent people or objects."
-  },
   "ax-alert": {
     "prefix": "ax-alert",
     "body": [
       "<ax-alert color=\"${1:primary}\">",
-      "   <ax-alert-title>${2:title}</ax-alert-title>",
-      "   <ax-alert-content>${3:content}</ax-alert-content>",
+      "   <ax-icon>${2:title}</ax-icon>",
+      "   <ax-title>${2:title}</ax-title>",
+      "   <ax-content>${3:content}</ax-content>",
       "</ax-alert>"
-    ],
-    "description": "An alert displays a short, important message in a way that attracts the user's attention without interrupting the user's task."
+    ]
   },
   "ax-avatar": {
     "prefix": "ax-avatar",
     "body": [
-      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10  ax-me-1\"></ax-avatar>"
-    ],
-    "description": "Avatars can be used to represent people or objects."
+      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10\"></ax-avatar>"
+    ]
   },
   "ax-badge": {
     "prefix": "ax-badge",
-    "body": [
-      "<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"
-    ],
-    "description": "Badges are mostly used to highlight ancillary information and bring attention to an element."
+    "body": ["<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"]
   },
   "ax-breadcrumbs": {
     "prefix": "ax-breadcrumbs",
@@ -42,15 +28,13 @@
       "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
       "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
       "</ax-breadcrumbs>"
-    ],
-    "description": "A breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy."
+    ]
   },
   "ax-button": {
     "prefix": "ax-button",
     "body": [
-      "<ax-button color=\"${1:dark}\" text=\"${2:Button}\"></ax-button>"
-    ],
-    "description": "Button Component is used to trigger an action or event, submitting forms, opening dialog boxes, and other porpuses in different sizes and looks."
+      "<ax-button color=\"${1:primary}\" text=\"${2:Button}\"></ax-button>"
+    ]
   },
   "ax-button-group": {
     "prefix": "ax-button-group",
@@ -73,8 +57,7 @@
       "   </ax-prefix>",
       "  </ax-button>",
       "</ax-button-group>"
-    ],
-    "description": "You can use the Button Group component to group buttons. You can use different modes to group multiple buttons."
+    ]
   },
   "ax-calendar": {
     "prefix": "ax-calendar",
@@ -83,38 +66,80 @@
     ],
     "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
   },
-  "ax-carousel": {
-    "prefix": "ax-carousel",
-    "body": [
-      "<ax-carousel width=\"${1:100%}\" height=\"${2:100%}\" [perMove]=\"${3:1}\" [perPage]=\"${4:1}\" [wheel]=\"${5:true}\" [snap]=\"${6:true}\"",
-      " [rewind]=\"${7:true}\">",
-      "   <ax-carousel-item class=\"ax-h-full\" *ngFor=\"let carouselItem of ${8:_carouselItems}\">",
-      "    <article class=\"ax-flex-col ax-flex ax-items-center\" (click)=\"${9:_handleOnItemClick}(param)\">",
-      "       <div class=\"ax-w-20 ax-h-20 ax-p-2 lg:ax-h-24 lg:ax-w-24 lg:ax-p-3 ax-bg-white ax-flex ax-items-center",
-      "       ax-cursor-pointer ax-justify-center ax-shadow-md ax-rounded-md\">",
-      "       <img width=\"100%\" [src]=\"carouselItem.image\" alt=\"avatar\" />",
-      "       </div>",
-      "       <h5 class=\"ax-font-medium ax-my-2 ax-text-sm ax-block\">{{carouselItem.title}}</h5>",
-      "    </article>",
-      "   </ax-carousel-item>",
-      "   <ax-carousel-arrows class=\"ax-text-dark-400\"></ax-carousel-arrows>",
-      "</ax-carousel>"
-    ],
-    "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
-  },
   "ax-check-box": {
     "prefix": "ax-check-box",
-    "body": [
-      "<ax-check-box [value]=\"${1:}\"></ax-check-box>"
-    ],
-    "description": "Checkboxes allow the user to select one or more items from a set."
+    "body": ["<ax-check-box [value]=\"${1:}\"></ax-check-box>"]
+  },
+  "ax-chips": {
+    "prefix": "ax-chips",
+    "body": ["<ax-chips text=\"${1:}\" color=\"primary\"></ax-chips>"]
   },
   "ax-collapse": {
     "prefix": "ax-collapse",
     "body": [
-      "<ax-collapse caption=\"${1:panel header}\">  </ax-collapse>"
-    ],
-    "description": "A content area which can be collapsed and expanded."
+      " <ax-collapse-group >",
+      "   <ax-collapse caption=\"panel header \">",
+      "     <p>",
+      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
+      "     </p>",
+      "   </ax-collapse>",
+      "   <ax-collapse caption=\"panel header \">",
+      "     <p>",
+      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
+      "     </p>",
+      "   </ax-collapse>",
+      "   <ax-collapse caption=\"panel header \">",
+      "     <p>",
+      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
+      "     </p>",
+      "   </ax-collapse>",
+      " </ax-collapse-group>"
+    ]
+  },
+  "ax-color-palette": {
+    "prefix": "ax-color-palette",
+    "body": [
+      "<ax-color-palette [value]=\"${1:value}\">",
+      " <ax-color-palette-preview></ax-color-palette-preview>",
+      " <ax-color-palette-picker></ax-color-palette-picker>",
+      " <ax-color-palette-swatches></ax-color-palette-swatches>",
+      " <ax-color-palette-input></ax-color-palette-input>",
+      "</ax-color-palette>"
+    ]
+  },
+  "ax-color-picker": {
+    "prefix": "ax-color-picker",
+    "body": [
+      "<ax-color-picker [value]=\"${1:value}\" (onValueChanged)=\"${2:handleValueChange($event)}\">",
+      "</ax-color-picker>"
+    ]
+  },
+  "ax-data-table": {
+    "prefix": "ax-data-table",
+    "body": [
+      "<ax-data-table [items]=\"${1:Items}\">",
+      " <ax-data-column valueField=\"${2:valueField}\" caption=\"${3:caption}\"></ax-data-column>",
+      " <ax-data-column valueField=\"${4:valueField}\" caption=\"${5:caption}\"></ax-data-column>",
+      " <ax-data-column valueField=\"${6:valueField}\" caption=\"${7:caption}\"></ax-data-column>",
+      "</ax-data-table>"
+    ]
+  },
+  "ax-data-pager": {
+    "prefix": "ax-data-pager",
+    "body": [
+      "<ax-data-pager [total]=\"${1:total}\" [size]=\"${2:50}\" [displayMode]=\"${3:custom}\">",
+      "   <ax-prefix>",
+      "       <ax-data-pager-page-sizes>",
+      "   </ax-data-pager-page-sizes>",
+      "   </ax-prefix>",
+      "   <ax-suffix>",
+      "       <ax-data-pager-prev-buttons></ax-data-pager-prev-buttons>",
+      "       <ax-data-pager-input-selector></ax-data-pager-input-selector>",
+      "       <ax-data-pager-info text=\"${4:custom}\"></ax-data-pager-info>",
+      "       <ax-data-pager-next-buttons></ax-data-pager-next-buttons>",
+      "   </ax-suffix>",
+      "</ax-data-pager>"
+    ]
   },
   "ax-date-picker": {
     "prefix": "ax-date-picker",
@@ -122,6 +147,24 @@
       "<ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" ></ax-date-picker>"
     ],
     "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
+  },
+  "ax-drawer": {
+    "prefix": "ax-drawer",
+    "body": [
+      "<ax-drawer-container>",
+      " <ax-drawer #drawer location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"'${3:overlay}'\">",
+      "     <ax-content>",
+      "       ${4:// Add your drawer content here.}",
+      "     </ax-content>",
+      "</ax-drawer>",
+      " <ax-drawer-content class=\"md:ax-bg-slate-50\">",
+      "     <ax-content>",
+      "       ${5:// Add your page content here or pass child component (router-outlet).}",
+      "     </ax-content>",
+      " </ax-drawer-content>",
+      "</ax-drawer-container>"
+    ],
+    "description": "create Drawer"
   },
   "ax-dropdown-button": {
     "prefix": "ax-dropdown-button",
@@ -143,68 +186,64 @@
       "         <ax-icon icon=\"${10:}\"></ax-icon>",
       "       </ax-suffix>",
       "</ax-button>"
-    ],
-    "description": "Dropdowns are toggleable, contextual overlays for displaying lists of links and more."
+    ]
+  },
+  "ax-form": {
+    "prefix": "ax-form",
+    "body": [
+      "<ax-form #form validationMessageMode=\"tooltip\">",
+      " ${1}",
+      "</ax-form>"
+    ]
+  },
+  "ax-form-field": {
+    "prefix": "ax-form",
+    "body": [
+      "<ax-form-field>",
+      " <ax-label>Username</ax-label>",
+      " ${1}",
+      "</ax-form-field>"
+    ]
+  },
+  "ax-image": {
+    "prefix": "ax-image",
+    "body": ["<ax-image src=\"${1}\"></ax-image>"]
+  },
+  "ax-uploader": {
+    "prefix": "ax-uploader",
+    "body": ["<ax-uploader>${1}</ax-uploader>"]
   },
   "ax-menu": {
     "prefix": "ax-menu",
     "body": [
       "<ax-menu [textField]=\"'${1:}'\"  [items]=\"${2:}\" direction=\"${3:vertical}\" [hasChildField]=\"'${4:}'\"  [icon]=\"'${5:}'\" [disableField]=\"'${6:}'\" (onMenuItemClick)=\"${7:onMenuItemClick($event)}\"></ax-menu>"
-    ],
-    "description": "create menu"
-  },
-  "ax-drawer": {
-    "prefix": "ax-drawer",
-    "body": [
-      "<ax-drawer-container>",
-      " <ax-drawer #drawer location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"'${3:overlay}'\">",
-      "     ${4:// Add your drawer content here.}",
-      "</ax-drawer>",
-      " <ax-drawer-content class=\"md:ax-bg-slate-50\">",
-      "     ${5:// Add your page content here or pass child component (router-outlet).}",
-      " </ax-drawer-content>",
-      "</ax-drawer-container>"
-    ],
-    "description": "create Drawer"
-  },
-  "ax-form-validation": {
-    "prefix": "ax-form-validation",
-    "body": [
-      "<ax-form #validationForm>",
-      " <ax-form-field>",
-      "  <ax-text-box class=\"ax-text-2xl\">",
-      "   <ax-validation-rule message=\"${1:textbox can't be empty}\" rule=\"${2:required}\">",
-      "   </ax-validation-rule>",
-      "  </ax-text-box>",
-      " </ax-form-field>",
-      " <ax-button (click)=\"triggerValidation()\" class=\"ax-mt-2\" text=\"${3:send}\" color=\"${4:primary}\">",
-      " </ax-button>",
-      " <p>Try yourself: Tap to click button with empty field.</p>",
-      " <p class=\"ax-text-danger-500 ax-text-sm\">Note: Make sure to use ax-validation-rule inside ax-form-field wrapper.</p>",
-      "</ax-form>"
-    ],
-    "description": "A Form shows a set of related fields in a structured way with validation feature."
+    ]
   },
   "ax-number-box": {
     "prefix": "ax-number-box",
     "body": [
       " <ax-number-box [decimals]=\"${1:}\"  allowNull=\"${2:}\" [minValue]=\"${3:}\" [maxValue]=\"${4:}\"  [thousandsSeparator]=\"${5:}\" [(value)]=\"${5:}\"[padDecimalZeros]=\"${6:}\"></ax-number-box>"
-    ],
-    "description": "create number-box"
+    ]
   },
   "ax-password-box": {
     "prefix": "ax-password-box",
     "body": [
       "<ax-password-box [showToggleButton]=\"${1:true}\"></ax-password-box>"
+    ]
+  },
+  "ax-validation": {
+    "prefix": "ax-form-validation",
+    "body": [
+      "<ax-validation-rule message=\"${1:field can't be empty}\" rule=\"${2:required}\">",
+      "</ax-validation-rule>"
     ],
-    "description": "create password-box"
+    "description": "A Form shows a set of related fields in a structured way with validation feature."
   },
   "ax-progress-bar": {
     "prefix": "ax-progress-bar",
     "body": [
       "<ax-progress-bar color=\"${1:secondary}\" [value]=\"${2:}\" ></ax-progress-bar>"
-    ],
-    "description": "create progress-bar"
+    ]
   },
   "ax-result": {
     "prefix": "ax-result",
@@ -226,19 +265,7 @@
       "     </ax-button>",
       "   </div>",
       "</ax-result>"
-    ],
-    "description": "create result"
-  },
-  "ax-rating": {
-    "prefix": "ax-rating",
-    "body": [
-      "<div class=\"ax-rating-container\" #stars>",
-      "   <ng-container *ngFor=\"let star of stars\">",
-      "       <span class=\"ax-rating-start ax-ic-star-outline ax-text-2xl\" (click)=\"handleStarClick(item)\"></span>",
-      "   </ng-container>",
-      "</div>"
-    ],
-    "description": "create ratings"
+    ]
   },
   "ax-radio": {
     "prefix": "ax-radio",
@@ -251,15 +278,13 @@
     "prefix": "ax-select-box",
     "body": [
       "<ax-select-box [items]=\"${1:}\"  textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\"  [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"></ax-select-box>"
-    ],
-    "description": "create select-box"
+    ]
   },
   "ax-selection-list": {
     "prefix": "ax-selection-list",
     "body": [
       "<ax-selection-list  [items]=\"${1:}\" valueField=\"${2:}\" textField=\"${3:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
-    ],
-    "description": "create selection-list"
+    ]
   },
   "ax-skelton": {
     "prefix": "ax-skelton",
@@ -272,15 +297,11 @@
       "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ax-skeleton\"></div>",
       " </div>",
       "</div>"
-    ],
-    "description": "Skeleton loading screens provide an approximate representation of a site layout while a page is loading data"
+    ]
   },
   "ax-switch": {
     "prefix": "ax-switch",
-    "body": [
-      "<ax-switch [value]=\"${1:}\"></ax-switch>"
-    ],
-    "description": "create switch"
+    "body": ["<ax-switch [value]=\"${1:}\"></ax-switch>"]
   },
   "ax-table": {
     "prefix": "ax-table",
@@ -316,8 +337,7 @@
       "   </tr>",
       " </tbody>",
       "</table>"
-    ],
-    "description": "The table component is the only set of classes that you can use to have a simple but efficient table."
+    ]
   },
   "ax-tabs": {
     "prefix": "ax-tabs",
@@ -326,86 +346,66 @@
       " <ax-tab-item text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
       " <ax-tab-item text=\"${2:tabName2}\" (activeChange)=\"_handleActiveChange2($event)\"></ax-tab-item>",
       "</ax-tabs>"
-    ],
-    "description": "A view that switches between multiple child views using interactive user interface elements."
+    ]
   },
   "ax-text-box": {
     "prefix": "ax-text-box",
-    "body": [
-      "<ax-text-box></ax-text-box>"
-    ],
-    "description": "create text-box"
-  },
-  "ax-input-mask": {
-    "prefix": "ax-input-mask",
-    "body": [
-      " <ax-input-mask mask=\"${1:00000000000}\"></ax-input-mask>"
-    ],
+    "body": ["<ax-text-box></ax-text-box>"],
     "description": "create text-box"
   },
   "ax-loading": {
     "prefix": "ax-loading",
-    "body": [
-      "<ax-button  color=\"primary\" class=\"ax-w-full\" [text]=\"some text\" [disabled]=\"isLoading\">",
-      "<ax-loading *ngIf=\"isLoading\"></ax-loading>",
-      "</ax-button>"
-    ],
-    "description": "create text-box"
+    "body": ["<ax-loading *ngIf=\"isLoading\"></ax-loading>"]
   },
   "ax-label": {
     "prefix": "ax-label",
-    "body": [
-      "<ax-label>${1:Type your label here...}</ax-label>"
-    ],
-    "description": "add label on forms"
+    "body": ["<ax-label>${1:Type your label here...}</ax-label>"]
   },
   "ax-textarea": {
     "prefix": "ax-textarea",
-    "body": [
-      "<ax-textarea></ax-textarea>"
-    ],
-    "description": "The ax-textarea tag defines a multi-line text input control."
+    "body": ["<ax-textarea></ax-textarea>"]
   },
   "ax-page-footer": {
     "prefix": "ax-page-footer",
-    "body": [
-      "<ax-page-footer></ax-page-footer>"
-    ],
-    "description": "Adds Footer Seprator to the popup"
+    "body": ["<ax-page-footer></ax-page-footer>"]
   },
   "ax-suffix": {
     "prefix": "ax-suffix",
-    "body": [
-      "<ax-suffix></ax-suffix>"
-    ],
-    "description": "suffix for items"
+    "body": ["<ax-suffix>${1:}</ax-suffix>"]
   },
   "ax-prefix": {
     "prefix": "ax-prefix",
-    "body": [
-      "<ax-prefix></ax-prefix>"
-    ],
-    "description": "prefix for items"
+    "body": ["<ax-prefix>${1:}</ax-prefix>"]
+  },
+  "ax-title": {
+    "prefix": "ax-title",
+    "body": ["<ax-title>${1:}</ax-title>"]
+  },
+  "ax-sub-title": {
+    "prefix": "ax-sub-title",
+    "body": ["<ax-sub-title>${1:}</ax-sub-title>"]
+  },
+  "ax-close-button": {
+    "prefix": "ax-close-button",
+    "body": ["<ax-close-button></ax-close-button>"]
+  },
+  "ax-content": {
+    "prefix": "ax-content",
+    "body": ["<ax-content>${1:}</ax-content>"]
   },
   "ax-icon": {
     "prefix": "ax-icon",
     "body": [
-      "     <ax-icon>",
-      "       <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\" viewBox=\"0 0 24 24\"",
-      "       stroke=\"currentColor\" stroke-width=\"2\">",
-      "       <path stroke-linecap=\"round\" stroke-linejoin=\"round",
-      "       d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2",
-      "       0 002 2z\" />",
-      "       </svg>",
+      "     <ax-icon class=\"${1:}\">",
+      "      // You can place svg, img, i, span here or use class propperty on ax-icon tag",
+      "      ${2:}                                                                        ",
       "     </ax-icon>"
-    ],
-    "description": "add svg icon"
+    ]
   },
-  "ax-icon-in-button": {
-    "prefix": "ax-icon-in-button",
+  "ax-icon-button": {
+    "prefix": "ax-icon-button",
     "body": [
-      "<ax-button class=\"ax-sm\" look=\"blank\" (onClick)=\"_onButtoClick\">",
-      "   <ax-prefix>",
+      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
       "     <ax-icon>",
       "       <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\" viewBox=\"0 0 24 24\"",
       "       stroke=\"currentColor\" stroke-width=\"2\">",
@@ -414,18 +414,15 @@
       "       0 002 2z\" />",
       "       </svg>",
       "     </ax-icon>",
-      "   </ax-prefix>",
       "</ax-button>"
-    ],
-    "description": "add icon inside button"
+    ]
   },
-  "ax-loading-in-button": {
-    "prefix": "ax-loading-in-button",
+  "ax-loading-button": {
+    "prefix": "ax-loading-button",
     "body": [
-      "<ax-button class=\"ax-sm\" look=\"blank\" (onClick)=\"_onButtoClick\">",
+      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
       "  <ax-loading *ngIf=\"loading\"></ax-loading>",
       "</ax-button>"
-    ],
-    "description": "add loading inside button"
+    ]
   }
 }
