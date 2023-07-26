@@ -1,0 +1,48 @@
+{
+  "name": "acorex",
+  "displayName": "acorex",
+  "description": "extention for acorex workspace",
+  "repository": "https://github.com/acorexui/acorex-vscode-extention.git",
+  "version": "2.0.0",
+  "icon": "assets/images/icon.png",
+  "publisher": "acorex",
+  "scripts": {
+    "pack": "vsce package",
+    "publish": "vsce publish"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Snippets",
+    "Extension Packs"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "ts",
+        "path": "./snippets/ts.json"
+      }
+    ]
+  },
+  "extensionPack": [
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    "Thinker.font-awesome",
+    "nrwl.angular-console",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "esbenp.prettier-vscode",
+    "Mikael.Angular-BeastCode",
+    "Angular.ng-template",
+    "PKief.material-icon-theme",
+    "GitHub.github-vscode-theme",
+    "Gruntfuggly.todo-tree",
+    "alfnielsen.vsc-scaffolding",
+    "firsttris.vscode-jest-runner"
+  ]
+}

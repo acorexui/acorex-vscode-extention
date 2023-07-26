@@ -1,0 +1,428 @@
+{
+  "ax-alert": {
+    "prefix": "ax-alert",
+    "body": [
+      "<ax-alert color=\"${1:primary}\">",
+      "   <ax-icon>${2:title}</ax-icon>",
+      "   <ax-title>${2:title}</ax-title>",
+      "   <ax-content>${3:content}</ax-content>",
+      "</ax-alert>"
+    ]
+  },
+  "ax-avatar": {
+    "prefix": "ax-avatar",
+    "body": [
+      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10\"></ax-avatar>"
+    ]
+  },
+  "ax-badge": {
+    "prefix": "ax-badge",
+    "body": ["<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"]
+  },
+  "ax-breadcrumbs": {
+    "prefix": "ax-breadcrumbs",
+    "body": [
+      "<ax-breadcrumbs>",
+      "    <ax-breadcrumbs-item text=\"${1:Home}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Product}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
+      "</ax-breadcrumbs>"
+    ]
+  },
+  "ax-button": {
+    "prefix": "ax-button",
+    "body": [
+      "<ax-button color=\"${1:primary}\" text=\"${2:Button}\"></ax-button>"
+    ]
+  },
+  "ax-button-group": {
+    "prefix": "ax-button-group",
+    "body": [
+      "<ax-button-group color=\"${1:primary}\" (onItemClick)=\"${2:handleOnItemClick($event)}\">",
+      "  <ax-button text=\"${3:Bold}\">",
+      "    <ax-prefix>",
+      "     <ax-icon icon=\"${4:}\"></ax-icon>",
+      "    </ax-prefix>",
+      "  </ax-button>",
+      "  <ax-button text=\"${3:Italic}\">",
+      "   <ax-prefix>",
+      "     <ax-icon icon=\"${6:}\">",
+      "     </ax-icon>",
+      "   </ax-prefix>",
+      "  </ax-button>",
+      "  <ax-button text=\"${7:Underline}\">",
+      "   <ax-prefix>",
+      "     <ax-icon icon=\"${8:}\"></ax-icon>",
+      "   </ax-prefix>",
+      "  </ax-button>",
+      "</ax-button-group>"
+    ]
+  },
+  "ax-calendar": {
+    "prefix": "ax-calendar",
+    "body": [
+      "<ax-calendar (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
+    ],
+    "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
+  },
+  "ax-check-box": {
+    "prefix": "ax-check-box",
+    "body": ["<ax-check-box [value]=\"${1:}\"></ax-check-box>"]
+  },
+  "ax-chips": {
+    "prefix": "ax-chips",
+    "body": ["<ax-chips text=\"${1:}\" color=\"primary\"></ax-chips>"]
+  },
+  "ax-collapse": {
+    "prefix": "ax-collapse",
+    "body": [
+      " <ax-collapse-group >",
+      "   <ax-collapse caption=\"panel header \">",
+      "     <p>",
+      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
+      "     </p>",
+      "   </ax-collapse>",
+      "   <ax-collapse caption=\"panel header \">",
+      "     <p>",
+      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
+      "     </p>",
+      "   </ax-collapse>",
+      "   <ax-collapse caption=\"panel header \">",
+      "     <p>",
+      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
+      "     </p>",
+      "   </ax-collapse>",
+      " </ax-collapse-group>"
+    ]
+  },
+  "ax-color-palette": {
+    "prefix": "ax-color-palette",
+    "body": [
+      "<ax-color-palette [value]=\"${1:value}\">",
+      " <ax-color-palette-preview></ax-color-palette-preview>",
+      " <ax-color-palette-picker></ax-color-palette-picker>",
+      " <ax-color-palette-swatches></ax-color-palette-swatches>",
+      " <ax-color-palette-input></ax-color-palette-input>",
+      "</ax-color-palette>"
+    ]
+  },
+  "ax-color-picker": {
+    "prefix": "ax-color-picker",
+    "body": [
+      "<ax-color-picker [value]=\"${1:value}\" (onValueChanged)=\"${2:handleValueChange($event)}\">",
+      "</ax-color-picker>"
+    ]
+  },
+  "ax-data-table": {
+    "prefix": "ax-data-table",
+    "body": [
+      "<ax-data-table [items]=\"${1:Items}\">",
+      " <ax-data-column valueField=\"${2:valueField}\" caption=\"${3:caption}\"></ax-data-column>",
+      " <ax-data-column valueField=\"${4:valueField}\" caption=\"${5:caption}\"></ax-data-column>",
+      " <ax-data-column valueField=\"${6:valueField}\" caption=\"${7:caption}\"></ax-data-column>",
+      "</ax-data-table>"
+    ]
+  },
+  "ax-data-pager": {
+    "prefix": "ax-data-pager",
+    "body": [
+      "<ax-data-pager [total]=\"${1:total}\" [size]=\"${2:50}\" [displayMode]=\"${3:custom}\">",
+      "   <ax-prefix>",
+      "       <ax-data-pager-page-sizes>",
+      "   </ax-data-pager-page-sizes>",
+      "   </ax-prefix>",
+      "   <ax-suffix>",
+      "       <ax-data-pager-prev-buttons></ax-data-pager-prev-buttons>",
+      "       <ax-data-pager-input-selector></ax-data-pager-input-selector>",
+      "       <ax-data-pager-info text=\"${4:custom}\"></ax-data-pager-info>",
+      "       <ax-data-pager-next-buttons></ax-data-pager-next-buttons>",
+      "   </ax-suffix>",
+      "</ax-data-pager>"
+    ]
+  },
+  "ax-date-picker": {
+    "prefix": "ax-date-picker",
+    "body": [
+      "<ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" ></ax-date-picker>"
+    ],
+    "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
+  },
+  "ax-drawer": {
+    "prefix": "ax-drawer",
+    "body": [
+      "<ax-drawer-container>",
+      " <ax-drawer #drawer location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"'${3:overlay}'\">",
+      "     <ax-content>",
+      "       ${4:// Add your drawer content here.}",
+      "     </ax-content>",
+      "</ax-drawer>",
+      " <ax-drawer-content class=\"md:ax-bg-slate-50\">",
+      "     <ax-content>",
+      "       ${5:// Add your page content here or pass child component (router-outlet).}",
+      "     </ax-content>",
+      " </ax-drawer-content>",
+      "</ax-drawer-container>"
+    ],
+    "description": "create Drawer"
+  },
+  "ax-dropdown-button": {
+    "prefix": "ax-dropdown-button",
+    "body": [
+      "<ax-button text=\"${1:}\">",
+      "  <ax-dropdown-panel (onItemClick)=\"${2:handleOnItemClick($event)}\">",
+      "     <ax-button-item text=\"${3:}\" name=\"${4:}\">",
+      "       <ax-prefix>",
+      "        <ax-icon icon=\"${5:}\"></ax-icon>",
+      "       </ax-prefix>",
+      "     </ax-button-item>",
+      "     <ax-button-item text=\"${6:}\" color=\"${7:}\" name=\"${8:}\">",
+      "       <ax-prefix>",
+      "       <ax-icon icon=\"${9:}\"></ax-icon>",
+      "       </ax-prefix>",
+      "     </ax-button-item>",
+      "  </ax-dropdown-panel>",
+      "       <ax-suffix>",
+      "         <ax-icon icon=\"${10:}\"></ax-icon>",
+      "       </ax-suffix>",
+      "</ax-button>"
+    ]
+  },
+  "ax-form": {
+    "prefix": "ax-form",
+    "body": [
+      "<ax-form #form validationMessageMode=\"tooltip\">",
+      " ${1}",
+      "</ax-form>"
+    ]
+  },
+  "ax-form-field": {
+    "prefix": "ax-form",
+    "body": [
+      "<ax-form-field>",
+      " <ax-label>Username</ax-label>",
+      " ${1}",
+      "</ax-form-field>"
+    ]
+  },
+  "ax-image": {
+    "prefix": "ax-image",
+    "body": ["<ax-image src=\"${1}\"></ax-image>"]
+  },
+  "ax-uploader": {
+    "prefix": "ax-uploader",
+    "body": ["<ax-uploader>${1}</ax-uploader>"]
+  },
+  "ax-menu": {
+    "prefix": "ax-menu",
+    "body": [
+      "<ax-menu [textField]=\"'${1:}'\"  [items]=\"${2:}\" direction=\"${3:vertical}\" [hasChildField]=\"'${4:}'\"  [icon]=\"'${5:}'\" [disableField]=\"'${6:}'\" (onMenuItemClick)=\"${7:onMenuItemClick($event)}\"></ax-menu>"
+    ]
+  },
+  "ax-number-box": {
+    "prefix": "ax-number-box",
+    "body": [
+      " <ax-number-box [decimals]=\"${1:}\"  allowNull=\"${2:}\" [minValue]=\"${3:}\" [maxValue]=\"${4:}\"  [thousandsSeparator]=\"${5:}\" [(value)]=\"${5:}\"[padDecimalZeros]=\"${6:}\"></ax-number-box>"
+    ]
+  },
+  "ax-password-box": {
+    "prefix": "ax-password-box",
+    "body": [
+      "<ax-password-box [showToggleButton]=\"${1:true}\"></ax-password-box>"
+    ]
+  },
+  "ax-validation": {
+    "prefix": "ax-form-validation",
+    "body": [
+      "<ax-validation-rule message=\"${1:field can't be empty}\" rule=\"${2:required}\">",
+      "</ax-validation-rule>"
+    ],
+    "description": "A Form shows a set of related fields in a structured way with validation feature."
+  },
+  "ax-progress-bar": {
+    "prefix": "ax-progress-bar",
+    "body": [
+      "<ax-progress-bar color=\"${1:secondary}\" [value]=\"${2:}\" ></ax-progress-bar>"
+    ]
+  },
+  "ax-result": {
+    "prefix": "ax-result",
+    "body": [
+      "<ax-result type=\"${1:success}\" caption=\"${2:Invoice paid successfully}\"",
+      "   description=\"${3:Payment has been completed successfully and your service will be activated in a few minutes.",
+      "   You can view your current account history and service status in the user panel.}\">",
+      "   <div class=\"ax-flex ax-items-center\">",
+      "     <ax-button color=\"${4:dark}\" text=\"${5:Return to the panel}\" class=\"ax-mx-auto\">",
+      "         <ax-prefix>",
+      "             <ax-icon>",
+      "                 <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\"",
+      "                 viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\">",
+      "                 <path stroke-linecap=\"round\" stroke-linejoin=\"round",
+      "                 d=\"M10 19l-7-7m0 0l7-7m-7 7h18\" />",
+      "                 </svg>",
+      "             </ax-icon>",
+      "         </ax-prefix>",
+      "     </ax-button>",
+      "   </div>",
+      "</ax-result>"
+    ]
+  },
+  "ax-radio": {
+    "prefix": "ax-radio",
+    "body": [
+      "<ax-radio [disabled]=\"${1:false}\"><ax-label>${2:title}</ax-label></ax-radio>"
+    ],
+    "description": "create radio-button"
+  },
+  "ax-select-box": {
+    "prefix": "ax-select-box",
+    "body": [
+      "<ax-select-box [items]=\"${1:}\"  textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\"  [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"></ax-select-box>"
+    ]
+  },
+  "ax-selection-list": {
+    "prefix": "ax-selection-list",
+    "body": [
+      "<ax-selection-list  [items]=\"${1:}\" valueField=\"${2:}\" textField=\"${3:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
+    ]
+  },
+  "ax-skelton": {
+    "prefix": "ax-skelton",
+    "body": [
+      "<div class=\"ax-flex\">",
+      " <div class=\"ax-block ax-w-28 ax-h-28 ax-skeleton\"></div>",
+      " <div class=\"ax-ms-3\">",
+      "     <div class=\"ax-block ax-w-60 ax-h-8 ax-skeleton\"></div>",
+      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ax-skeleton\"></div>",
+      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ax-skeleton\"></div>",
+      " </div>",
+      "</div>"
+    ]
+  },
+  "ax-switch": {
+    "prefix": "ax-switch",
+    "body": ["<ax-switch [value]=\"${1:}\"></ax-switch>"]
+  },
+  "ax-table": {
+    "prefix": "ax-table",
+    "body": [
+      "<table class=\"ax-table\">",
+      " <thead>",
+      "   <tr>",
+      "     <th>First Name</th>",
+      "     <th>Last Name</th>",
+      "     <th>Hero Title</th>",
+      "   </tr>",
+      " </thead>",
+      " <tbody>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Bruce</td>",
+      "     <td data-label=\"Last Name\">Wayne</td>",
+      "     <td data-label=\"Hero Title\">Batman</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Peter</td>",
+      "     <td data-label=\"Last Name\">Parker</td>",
+      "     <td data-label=\"Hero Title\">Spiderman</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Bruce</td>",
+      "     <td data-label=\"Last Name\">Banner</td>",
+      "     <td data-label=\"Hero Title\">The Hulk</td>",
+      "   </tr>",
+      "   <tr>",
+      "     <td data-label=\"First Name\">Clark</td>",
+      "     <td data-label=\"Last Name\">Kent</td>",
+      "     <td data-label=\"Hero Title\">Superman</td>",
+      "   </tr>",
+      " </tbody>",
+      "</table>"
+    ]
+  },
+  "ax-tabs": {
+    "prefix": "ax-tabs",
+    "body": [
+      "<ax-tabs class=\"ax-look-${1:pills-color} mytabs ax-tabs-fit ax-w-full\">",
+      " <ax-tab-item text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      " <ax-tab-item text=\"${2:tabName2}\" (activeChange)=\"_handleActiveChange2($event)\"></ax-tab-item>",
+      "</ax-tabs>"
+    ]
+  },
+  "ax-text-box": {
+    "prefix": "ax-text-box",
+    "body": ["<ax-text-box></ax-text-box>"],
+    "description": "create text-box"
+  },
+  "ax-loading": {
+    "prefix": "ax-loading",
+    "body": ["<ax-loading *ngIf=\"isLoading\"></ax-loading>"]
+  },
+  "ax-label": {
+    "prefix": "ax-label",
+    "body": ["<ax-label>${1:Type your label here...}</ax-label>"]
+  },
+  "ax-textarea": {
+    "prefix": "ax-textarea",
+    "body": ["<ax-textarea></ax-textarea>"]
+  },
+  "ax-page-footer": {
+    "prefix": "ax-page-footer",
+    "body": ["<ax-page-footer></ax-page-footer>"]
+  },
+  "ax-suffix": {
+    "prefix": "ax-suffix",
+    "body": ["<ax-suffix>${1:}</ax-suffix>"]
+  },
+  "ax-prefix": {
+    "prefix": "ax-prefix",
+    "body": ["<ax-prefix>${1:}</ax-prefix>"]
+  },
+  "ax-title": {
+    "prefix": "ax-title",
+    "body": ["<ax-title>${1:}</ax-title>"]
+  },
+  "ax-sub-title": {
+    "prefix": "ax-sub-title",
+    "body": ["<ax-sub-title>${1:}</ax-sub-title>"]
+  },
+  "ax-close-button": {
+    "prefix": "ax-close-button",
+    "body": ["<ax-close-button></ax-close-button>"]
+  },
+  "ax-content": {
+    "prefix": "ax-content",
+    "body": ["<ax-content>${1:}</ax-content>"]
+  },
+  "ax-icon": {
+    "prefix": "ax-icon",
+    "body": [
+      "     <ax-icon class=\"${1:}\">",
+      "      // You can place svg, img, i, span here or use class propperty on ax-icon tag",
+      "      ${2:}                                                                        ",
+      "     </ax-icon>"
+    ]
+  },
+  "ax-icon-button": {
+    "prefix": "ax-icon-button",
+    "body": [
+      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
+      "     <ax-icon>",
+      "       <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\" viewBox=\"0 0 24 24\"",
+      "       stroke=\"currentColor\" stroke-width=\"2\">",
+      "       <path stroke-linecap=\"round\" stroke-linejoin=\"round",
+      "       d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2",
+      "       0 002 2z\" />",
+      "       </svg>",
+      "     </ax-icon>",
+      "</ax-button>"
+    ]
+  },
+  "ax-loading-button": {
+    "prefix": "ax-loading-button",
+    "body": [
+      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
+      "  <ax-loading *ngIf=\"loading\"></ax-loading>",
+      "</ax-button>"
+    ]
+  }
+}
