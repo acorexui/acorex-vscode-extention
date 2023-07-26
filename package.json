@@ -44,5 +44,8 @@
     "Gruntfuggly.todo-tree",
     "alfnielsen.vsc-scaffolding",
     "firsttris.vscode-jest-runner"
-  ]
+  ],
+  "devDependencies": {
+    "vsce": "^2.15.0"
+  }
 }
