@@ -1,9 +1,6 @@
 # Change Log
 
-All notable changes to the "acorex" extension pack will be documented in this file.
+## V2.0.0
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- Add extension pack
+- Improve html snippets
