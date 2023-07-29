@@ -3,7 +3,7 @@
     "prefix": "ax-alert",
     "body": [
       "<ax-alert color=\"${1:primary}\">",
-      "   <ax-icon>${2:title}</ax-icon>",
+      "   <ax-icon>${1:icon}</ax-icon>",
       "   <ax-title>${2:title}</ax-title>",
       "   <ax-content>${3:content}</ax-content>",
       "</ax-alert>"
@@ -12,7 +12,7 @@
   "ax-avatar": {
     "prefix": "ax-avatar",
     "body": [
-      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10\"></ax-avatar>"
+      "<ax-avatar type=\"${1:default}\" color=\"${1:primary}\" class=\"ax-w-10 ax-h-10\"></ax-avatar>"
     ]
   },
   "ax-badge": {
@@ -23,10 +23,10 @@
     "prefix": "ax-breadcrumbs",
     "body": [
       "<ax-breadcrumbs>",
-      "    <ax-breadcrumbs-item text=\"${1:Home}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Product}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${1:Text}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${2:Text}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${3:Text}\"></ax-breadcrumbs-item>",
+      "    <ax-breadcrumbs-item text=\"${4:Text}\"></ax-breadcrumbs-item>",
       "</ax-breadcrumbs>"
     ]
   },
@@ -59,6 +59,29 @@
       "</ax-button-group>"
     ]
   },
+  "ax-icon-button": {
+    "prefix": "ax-icon-button",
+    "body": [
+      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
+      "     <ax-icon>",
+      "       <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\" viewBox=\"0 0 24 24\"",
+      "       stroke=\"currentColor\" stroke-width=\"2\">",
+      "       <path stroke-linecap=\"round\" stroke-linejoin=\"round",
+      "       d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2",
+      "       0 002 2z\" />",
+      "       </svg>",
+      "     </ax-icon>",
+      "</ax-button>"
+    ]
+  },
+  "ax-loading-button": {
+    "prefix": "ax-loading-button",
+    "body": [
+      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
+      "  <ax-loading *ngIf=\"loading\"></ax-loading>",
+      "</ax-button>"
+    ]
+  },
   "ax-calendar": {
     "prefix": "ax-calendar",
     "body": [
@@ -78,12 +101,12 @@
     "prefix": "ax-collapse",
     "body": [
       " <ax-collapse-group >",
-      "   <ax-collapse caption=\"panel header \">",
+      "   <ax-collapse caption=\"Panel header \">",
       "     <p>",
       "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
       "     </p>",
       "   </ax-collapse>",
-      "   <ax-collapse caption=\"panel header \">",
+      "   <ax-collapse caption=\"Panel header \">",
       "     <p>",
       "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
       "     </p>",
@@ -114,20 +137,10 @@
       "</ax-color-picker>"
     ]
   },
-  "ax-data-table": {
-    "prefix": "ax-data-table",
-    "body": [
-      "<ax-data-table [items]=\"${1:Items}\">",
-      " <ax-data-column valueField=\"${2:valueField}\" caption=\"${3:caption}\"></ax-data-column>",
-      " <ax-data-column valueField=\"${4:valueField}\" caption=\"${5:caption}\"></ax-data-column>",
-      " <ax-data-column valueField=\"${6:valueField}\" caption=\"${7:caption}\"></ax-data-column>",
-      "</ax-data-table>"
-    ]
-  },
   "ax-data-pager": {
     "prefix": "ax-data-pager",
     "body": [
-      "<ax-data-pager [total]=\"${1:total}\" [size]=\"${2:50}\" [displayMode]=\"${3:custom}\">",
+      "<ax-data-pager [total]=\"${1:total}\" [size]=\"${2:50}\" >",
       "   <ax-prefix>",
       "       <ax-data-pager-page-sizes>",
       "   </ax-data-pager-page-sizes>",
@@ -139,6 +152,16 @@
       "       <ax-data-pager-next-buttons></ax-data-pager-next-buttons>",
       "   </ax-suffix>",
       "</ax-data-pager>"
+    ]
+  },
+  "ax-data-table": {
+    "prefix": "ax-data-table",
+    "body": [
+      "<ax-data-table [items]=\"${1:Items}\">",
+      " <ax-data-column valueField=\"${2:valueField}\" caption=\"${3:caption}\"></ax-data-column>",
+      " <ax-data-column valueField=\"${4:valueField}\" caption=\"${5:caption}\"></ax-data-column>",
+      " <ax-data-column valueField=\"${6:valueField}\" caption=\"${7:caption}\"></ax-data-column>",
+      "</ax-data-table>"
     ]
   },
   "ax-date-picker": {
@@ -197,7 +220,7 @@
     ]
   },
   "ax-form-field": {
-    "prefix": "ax-form",
+    "prefix": "ax-form-field",
     "body": [
       "<ax-form-field>",
       " <ax-label>Username</ax-label>",
@@ -209,9 +232,13 @@
     "prefix": "ax-image",
     "body": ["<ax-image src=\"${1}\"></ax-image>"]
   },
-  "ax-uploader": {
-    "prefix": "ax-uploader",
-    "body": ["<ax-uploader>${1}</ax-uploader>"]
+  "ax-label": {
+    "prefix": "ax-label",
+    "body": ["<ax-label>${1:Type your label here...}</ax-label>"]
+  },
+  "ax-loading": {
+    "prefix": "ax-loading",
+    "body": ["<ax-loading *ngIf=\"isLoading\"></ax-loading>"]
   },
   "ax-menu": {
     "prefix": "ax-menu",
@@ -225,25 +252,48 @@
       " <ax-number-box [decimals]=\"${1:}\"  allowNull=\"${2:}\" [minValue]=\"${3:}\" [maxValue]=\"${4:}\"  [thousandsSeparator]=\"${5:}\" [(value)]=\"${5:}\"[padDecimalZeros]=\"${6:}\"></ax-number-box>"
     ]
   },
+  "ax-otp": {
+    "prefix": "ax-otp",
+    "body": [
+      "<ax-otp [length]=\"${1:4}\" (onCompleted)=\"${2:handleOnComplete($event)}\"></ax-otp>"
+    ]
+  },
   "ax-password-box": {
     "prefix": "ax-password-box",
     "body": [
       "<ax-password-box [showToggleButton]=\"${1:true}\"></ax-password-box>"
     ]
   },
-  "ax-validation": {
-    "prefix": "ax-form-validation",
+  "ax-popover": {
+    "prefix": "ax-popover",
     "body": [
-      "<ax-validation-rule message=\"${1:field can't be empty}\" rule=\"${2:required}\">",
-      "</ax-validation-rule>"
-    ],
-    "description": "A Form shows a set of related fields in a structured way with validation feature."
+      "<ax-popover",
+      "[target]=\"${1:target}\"",
+      "[position]=\"${2:position}\"",
+      "[openTrigger]=\"${3:manual}\"",
+      "[closeTrigger]=\"${4:clickout}\"",
+      "[adaptivityEnabled]=\"${5:true}\"",
+      "(onOpened)=\"${6:_handlePopupOnOpened($event)}\"",
+      "(onClosed)=\"${7:_handlePopupOnClosed($event)}\">",
+      " // Popover content ${8:}",
+      "</ax-popover>"
+    ]
   },
   "ax-progress-bar": {
     "prefix": "ax-progress-bar",
     "body": [
       "<ax-progress-bar color=\"${1:secondary}\" [value]=\"${2:}\" ></ax-progress-bar>"
     ]
+  },
+  "ax-radio": {
+    "prefix": "ax-radio",
+    "body": [
+      "<ax-radio [disabled]=\"${1:false}\"><ax-label>${2:title}</ax-label></ax-radio>"
+    ]
+  },
+  "ax-range-slider": {
+    "prefix": "ax-range-slider",
+    "body": ["<ax-range-slider></ax-range-slider>"]
   },
   "ax-result": {
     "prefix": "ax-result",
@@ -267,12 +317,9 @@
       "</ax-result>"
     ]
   },
-  "ax-radio": {
-    "prefix": "ax-radio",
-    "body": [
-      "<ax-radio [disabled]=\"${1:false}\"><ax-label>${2:title}</ax-label></ax-radio>"
-    ],
-    "description": "create radio-button"
+  "ax-search-box": {
+    "prefix": "ax-search-box",
+    "body": ["<ax-search-box></ax-search-box>"]
   },
   "ax-select-box": {
     "prefix": "ax-select-box",
@@ -285,6 +332,10 @@
     "body": [
       "<ax-selection-list  [items]=\"${1:}\" valueField=\"${2:}\" textField=\"${3:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
     ]
+  },
+  "ax-switch": {
+    "prefix": "ax-switch",
+    "body": ["<ax-switch [value]=\"${1:}\"></ax-switch>"]
   },
   "ax-skelton": {
     "prefix": "ax-skelton",
@@ -299,9 +350,37 @@
       "</div>"
     ]
   },
-  "ax-switch": {
-    "prefix": "ax-switch",
-    "body": ["<ax-switch [value]=\"${1:}\"></ax-switch>"]
+  "ax-tabs": {
+    "prefix": "ax-tabs",
+    "body": [
+      "<ax-tabs class=\"ax-look-${1:pills-color} mytabs ax-tabs-fit ax-w-full\">",
+      " <ax-tab-item text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
+      " <ax-tab-item text=\"${2:tabName2}\" (activeChange)=\"_handleActiveChange2($event)\"></ax-tab-item>",
+      "</ax-tabs>"
+    ]
+  },
+  "ax-tag": {
+    "prefix": "ax-tag",
+    "body": ["<ax-tag text=\"${1:}\"></ax-tag>"]
+  },
+  "ax-textarea": {
+    "prefix": "ax-textarea",
+    "body": ["<ax-textarea></ax-textarea>"]
+  },
+  "ax-text-box": {
+    "prefix": "ax-text-box",
+    "body": ["<ax-text-box></ax-text-box>"]
+  },
+  "ax-time-box": {
+    "prefix": "ax-time-box",
+    "body": ["<ax-time-box></ax-time-box>"]
+  },
+  "ax-validation": {
+    "prefix": "ax-validation",
+    "body": [
+      "<ax-validation-rule message=\"${1:field can't be empty}\" rule=\"${2:required}\">",
+      "</ax-validation-rule>"
+    ]
   },
   "ax-table": {
     "prefix": "ax-table",
@@ -339,35 +418,23 @@
       "</table>"
     ]
   },
-  "ax-tabs": {
-    "prefix": "ax-tabs",
+  "ax-tooltip": {
+    "prefix": "ax-tooltip",
     "body": [
-      "<ax-tabs class=\"ax-look-${1:pills-color} mytabs ax-tabs-fit ax-w-full\">",
-      " <ax-tab-item text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
-      " <ax-tab-item text=\"${2:tabName2}\" (activeChange)=\"_handleActiveChange2($event)\"></ax-tab-item>",
-      "</ax-tabs>"
+      "<div axTooltip=\"${1:text}\" axTooltipPosition=\"${2:end-end}\"></div>"
     ]
   },
-  "ax-text-box": {
-    "prefix": "ax-text-box",
-    "body": ["<ax-text-box></ax-text-box>"],
-    "description": "create text-box"
+  "ax-uploader": {
+    "prefix": "ax-uploader",
+    "body": ["<ax-uploader>${1}</ax-uploader>"]
   },
-  "ax-loading": {
-    "prefix": "ax-loading",
-    "body": ["<ax-loading *ngIf=\"isLoading\"></ax-loading>"]
+  "ax-header": {
+    "prefix": "ax-header",
+    "body": ["<ax-header></ax-header>"]
   },
-  "ax-label": {
-    "prefix": "ax-label",
-    "body": ["<ax-label>${1:Type your label here...}</ax-label>"]
-  },
-  "ax-textarea": {
-    "prefix": "ax-textarea",
-    "body": ["<ax-textarea></ax-textarea>"]
-  },
-  "ax-page-footer": {
-    "prefix": "ax-page-footer",
-    "body": ["<ax-page-footer></ax-page-footer>"]
+  "ax-footer": {
+    "prefix": "ax-footer",
+    "body": ["<ax-footer></ax-footer>"]
   },
   "ax-suffix": {
     "prefix": "ax-suffix",
@@ -400,29 +467,6 @@
       "      // You can place svg, img, i, span here or use class propperty on ax-icon tag",
       "      ${2:}                                                                        ",
       "     </ax-icon>"
-    ]
-  },
-  "ax-icon-button": {
-    "prefix": "ax-icon-button",
-    "body": [
-      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
-      "     <ax-icon>",
-      "       <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\" viewBox=\"0 0 24 24\"",
-      "       stroke=\"currentColor\" stroke-width=\"2\">",
-      "       <path stroke-linecap=\"round\" stroke-linejoin=\"round",
-      "       d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2",
-      "       0 002 2z\" />",
-      "       </svg>",
-      "     </ax-icon>",
-      "</ax-button>"
-    ]
-  },
-  "ax-loading-button": {
-    "prefix": "ax-loading-button",
-    "body": [
-      "<ax-button look=\"blank\" (onClick)=\"handleButtonClick()\">",
-      "  <ax-loading *ngIf=\"loading\"></ax-loading>",
-      "</ax-button>"
     ]
   }
 }

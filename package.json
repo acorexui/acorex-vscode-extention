@@ -40,10 +40,10 @@
     "Mikael.Angular-BeastCode",
     "Angular.ng-template",
     "PKief.material-icon-theme",
-    "GitHub.github-vscode-theme",
     "Gruntfuggly.todo-tree",
     "alfnielsen.vsc-scaffolding",
-    "firsttris.vscode-jest-runner"
+    "firsttris.vscode-jest-runner",
+    "alexiv.vscode-angular2-files"
   ],
   "devDependencies": {
     "vsce": "^2.15.0"
