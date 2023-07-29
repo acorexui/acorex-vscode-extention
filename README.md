@@ -1,16 +1,22 @@
-# acorex README
+# ACoreX VSCode Extention
 
-## Working with Markdown
+ACoreX extension includes required extensions as well as snippets that you can have for fast development.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## Install
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+1.  Install Visual Studio Code 1.80.0 or higher
+2.  Launch Code
+3.  From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
+4.  Select `Install Extension`
+5.  Type `acorex` and press enter
+6.  Reload Visual Studio Code
 
-## For more information
+## Usage
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+type `ax-` in html, ts file and select the desired option from the suggestion list
 
-**Enjoy!**
+## Contributors
+
+[Arash Oshnoudi](https://github.com/arashenprog)
+[Ali Safari](https://github.com/asafari72)
+[Reza Safari](https://github.com/reza47)
