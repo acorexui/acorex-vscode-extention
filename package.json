@@ -1,9 +1,9 @@
 {
   "name": "acorex",
-  "displayName": "acorex",
-  "description": "extention for acorex workspace",
+  "displayName": "ACoreX",
+  "description": "an extention for acorex workspace",
   "repository": "https://github.com/acorexui/acorex-vscode-extention.git",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "icon": "assets/images/icon.png",
   "publisher": "acorex",
   "scripts": {
