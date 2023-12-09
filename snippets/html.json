@@ -3,31 +3,10 @@
     "prefix": "ax-alert",
     "body": [
       "<ax-alert color=\"${1:primary}\">",
-      "   <ax-icon>${2:title}</ax-icon>",
-      "   <ax-title>${2:title}</ax-title>",
-      "   <ax-content>${3:content}</ax-content>",
+      "   <ax-icon>${2:icon}</ax-icon>",
+      "   <ax-title>${3:title}</ax-title>",
+      "   <ax-content>${4:content}</ax-content>",
       "</ax-alert>"
-    ]
-  },
-  "ax-avatar": {
-    "prefix": "ax-avatar",
-    "body": [
-      "<ax-avatar type=\"${1:text}\" text=\"${1:Avatar}\" class=\"ax-w-10 ax-h-10\"></ax-avatar>"
-    ]
-  },
-  "ax-badge": {
-    "prefix": "ax-badge",
-    "body": ["<ax-badge text=\"${1:Badge}\" color=\"${2:primary}\"></ax-badge>"]
-  },
-  "ax-breadcrumbs": {
-    "prefix": "ax-breadcrumbs",
-    "body": [
-      "<ax-breadcrumbs>",
-      "    <ax-breadcrumbs-item text=\"${1:Home}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Product}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Digitals}\"></ax-breadcrumbs-item>",
-      "    <ax-breadcrumbs-item text=\"${1:Playstation Plus}\"></ax-breadcrumbs-item>",
-      "</ax-breadcrumbs>"
     ]
   },
   "ax-button": {
@@ -40,80 +19,285 @@
     "prefix": "ax-button-group",
     "body": [
       "<ax-button-group color=\"${1:primary}\" (onItemClick)=\"${2:handleOnItemClick($event)}\">",
-      "  <ax-button text=\"${3:Bold}\">",
+      "  <ax-button-item text=\"${3:Bold}\">",
       "    <ax-prefix>",
       "     <ax-icon icon=\"${4:}\"></ax-icon>",
       "    </ax-prefix>",
-      "  </ax-button>",
-      "  <ax-button text=\"${3:Italic}\">",
-      "   <ax-prefix>",
-      "     <ax-icon icon=\"${6:}\">",
-      "     </ax-icon>",
-      "   </ax-prefix>",
-      "  </ax-button>",
-      "  <ax-button text=\"${7:Underline}\">",
-      "   <ax-prefix>",
-      "     <ax-icon icon=\"${8:}\"></ax-icon>",
-      "   </ax-prefix>",
-      "  </ax-button>",
+      "  </ax-button-item>",
       "</ax-button-group>"
     ]
   },
-  "ax-calendar": {
-    "prefix": "ax-calendar",
+  "ax-menu": {
+    "prefix": "ax-menu",
     "body": [
-      "<ax-calendar (onValueChanged)=\"${1:handleValueChanged($event)}\"></ax-calendar>"
-    ],
-    "description": "To define the start date of the range, use the min property. To define the end date of the range, use the max property"
+      "<ax-menu direction=\"${1:vertical}\" >",
+      " <ax-menu-item>",
+      "   <ax-item-menu text=\"${2:Menu Item}\"></ax-item-menu>",
+      " </ax-item-menu>",
+      " <ax-item-menu text=\"${3:Menu Item}\">",
+      "   <ax-prefix>",
+      "     <ax-icon>",
+      "       <i class=\"${4:icon}\"></i>",
+      "     </ax-icon>",
+      "   </ax-prefix>",
+      " </ax-menu-item> ",
+      "</ax-menu>"
+    ]
+  },
+  "ax-side-menu": {
+    "prefix": "ax-side-menu",
+    "body": [
+      "<ax-side-menu>",
+      " <ax-side-menu-item text=\"${1:Home}\">",
+      "   <ax-prefix>",
+      "     <ax-icon>",
+      "       <i class=\"${2:icon}\"></i>",
+      "     </ax-icon>",
+      "   </ax-prefix>",
+      " </ax-side-menu-item>",
+      " <ax-side-menu-item text=\"${3:Product}\">",
+      "   <ax-side-menu-item text=\"${4:Inside}\">",
+      "   </ax-side-menu-item>",
+      " </ax-side-menu-item>",
+      "</ax-side-menu>"
+    ]
   },
   "ax-check-box": {
     "prefix": "ax-check-box",
-    "body": ["<ax-check-box [value]=\"${1:}\"></ax-check-box>"]
-  },
-  "ax-chips": {
-    "prefix": "ax-chips",
-    "body": ["<ax-chips text=\"${1:}\" color=\"primary\"></ax-chips>"]
-  },
-  "ax-collapse": {
-    "prefix": "ax-collapse",
     "body": [
-      " <ax-collapse-group >",
-      "   <ax-collapse caption=\"panel header \">",
-      "     <p>",
-      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
-      "     </p>",
-      "   </ax-collapse>",
-      "   <ax-collapse caption=\"panel header \">",
-      "     <p>",
-      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
-      "     </p>",
-      "   </ax-collapse>",
-      "   <ax-collapse caption=\"panel header \">",
-      "     <p>",
-      "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsum suscipit esse velit labore voluptate quam numquam vel ab laboriosam adipisci culpa minus quaerat, sapiente reiciendis officiis laborum consectetur praesentium?",
-      "     </p>",
-      "   </ax-collapse>",
-      " </ax-collapse-group>"
+    "<ax-check-box >",
+    " <ax-label>Remember me</ax-label>",
+    "</ax-check-box>"
+  ]
+  },
+  "ax-color-box": {
+    "prefix": "ax-color-box",
+    "body": [
+      "<ax-color-box ngModel=\"${1:#3b82f6}\"></ax-color-box>"
     ]
   },
   "ax-color-palette": {
     "prefix": "ax-color-palette",
     "body": [
-      "<ax-color-palette [value]=\"${1:value}\">",
-      " <ax-color-palette-preview></ax-color-palette-preview>",
+      "<ax-color-palette ngModel=\"${1:#f00}\">",
       " <ax-color-palette-picker></ax-color-palette-picker>",
-      " <ax-color-palette-swatches></ax-color-palette-swatches>",
       " <ax-color-palette-input></ax-color-palette-input>",
-      "</ax-color-palette>"
+      "</ax-color-palette>" 
     ]
   },
-  "ax-color-picker": {
-    "prefix": "ax-color-picker",
+  "ax-datetime-box": {
+    "prefix": "ax-datetime-box",
     "body": [
-      "<ax-color-picker [value]=\"${1:value}\" (onValueChanged)=\"${2:handleValueChange($event)}\">",
-      "</ax-color-picker>"
+      "<ax-datetime-box>",
+      " <ax-clear-button></ax-clear-button>",
+      "</ax-datetime-box>"
     ]
   },
+  "ax-datetime-picker": {
+    "prefix": "ax-datetime-picker",
+    "body": [
+      "<ax-datetime-picker></ax-datetime-picker>"
+    ]
+  },
+  "ax-form": {
+    "prefix": "ax-form",
+    "body": [
+      "<ax-form #form1></ax-form>"
+    ]
+  },
+    "ax-number-box": {
+    "prefix": "ax-number-box",
+    "body": [
+      "<ax-number-box></ax-number-box>"
+    ]
+  },
+  "ax-otp": {
+    "prefix": "ax-otp",
+    "body": [
+      "<ax-otp [length]=\"${1:4}\" look=\"${2:fill}\"></ax-opt>"
+    ]
+  },
+  "ax-range-slider": {
+    "prefix": "ax-range-slider",
+    "body": [
+      "<ax-range-slider color=\"${1:info}\"></ax-range-slider>" 
+    ]
+  },
+  "ax-search-box": {
+    "prefix": "ax-search-box",
+    "body": [
+      "<ax-search-box><ax-clear-button></ax-clear-button></ax-search-box>"
+    ]
+  },
+  "ax-select-box": {
+    "prefix": "ax-select-box",
+    "body": [
+      "<ax-select-box [dataSource]=\"${1:dataSource}\">",
+      " <ax-search-box look=\"${2:fill}\"></ax-search-box>",
+      " <ax-validation-rule message=\"${3:field can't be empty}\" rule=\"${4:required}\"></ax-validation-rule>",
+      " <ax-clear-button></ax-clear-button>",
+      "</ax-select-box>"
+    ]
+  },
+  "ax-selection-list": {
+    "prefix": "ax-selection-list",
+    "body": [
+    "<ax-selection-list[direction]=\"${1:vertical}\" [items]=\"${2:items}\"></ax-selection>"
+    ] 
+  },
+  "ax-switch": {
+    "prefix": "ax-switch",
+    "body": ["<ax-switch color=\"${1:info}\">"]
+  },
+  "ax-textarea": {
+    "prefix": "ax-textarea",
+    "body": ["<ax-textarea [showCounter]=\"${1:true}\"><ax-prefix><ax-button text=\"${2:clear}\"></ax-button></ax-prefix></ax-textarea>"]
+  },
+  "ax-text-box": {
+    "prefix": "ax-text-box",
+    "body": ["<ax-text-box><ax-clear-button></ax-clear-button></ax-text-box>"]
+  },
+  "ax-uploader": {
+    "prefix": "ax-uploader",
+    "body": ["<ax-uploader></ax-uploader>"]
+  },
+  "ax-avatar": {
+    "prefix": "ax-avatar",
+    "body": [
+      "<ax-avatar></ax-avatar>"
+    ]
+  },
+  "ax-badge": {
+    "prefix": "ax-badge",
+    "body": ["<ax-badge text=\"${1:input}\"></ax-badge>"]
+  },
+  "ax-breadcrumbs": {
+    "prefix": "ax-breadcrumbs",
+    "body": [
+      "<ax-breadcrumbs>",
+      " <ax-breadcrumbs-item><a>Home</a></ax-breadcrumbs-item>",
+      " <ax-breadcrumbs-item><a>Categories</a></ax-breadcrumbs-item>",
+      "</ax-breadcrumbs-item>"
+    ]
+  },
+  "ax-calendar": {
+    "prefix": "ax-calendar",
+    "body": [
+      "<ax-calendar></ax-calendar>"
+    ]
+  },
+
+  "ax-chips": {
+    "prefix": "ax-chips",
+    "body": [
+      "<ax-chips text=\"${1:Content}\" color=\"${2:info}\" loop=\"${3:solid}\">",
+      " <ax-prefix><ax-icon icon=\"${ax-icon ax-icon-menu}\"></ax-icon></ax-prefix>"
+    ]
+  },
+  "ax-circular-progress": {
+    "prefix": "ax-circular-progress",
+    "body": [
+      "<ax-circular-progress [size]=\"${1: 75}\" [stroke]=\"${2:8}\" [progress]=\"${3:75}\"</ax-circular-progress>"
+    ]
+  },
+  "ax-collapes": {
+    "prefix": "ax-collapes",
+    "body": [
+      "<ax-collapse-group>",
+      " <ax-collapse caption=\"${1:Panel Item 1}\">",
+      "   <p>Lorem ipsum dolar</p>",
+      " </ax-collapse>",
+      "<ax-collapse-group>"
+    ]
+  },
+  "ax-data-pager": {
+    "prefix": "ax-data-pager",
+    "body": [
+      "<ax-data-pager #p1></ax-data-pager>"
+    ]
+  },
+  "ax-drawer": {
+    "prefix": "ax-drawer",
+    "body": [
+      "<ax-drawer-container>",
+      " <ax-drawer #drawer3 location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"${3:'overlay'}\">",
+      "   <ax-header>",
+      "     <ax-title>Besic</ax-title>",
+      "     <ax-close-button></ax-close-button>",
+      "   </ax-header>",
+      "   <ax-content></ax-content>",
+      " </ax-drawer>",
+      "</ax-drawer-container>"
+    ]
+  },
+  "ax-image": {
+    "prefix": "ax-image",
+    "body": ["<ax-image src=\"${https://4kwallpapers.com/images/wallpapers/gargantua-black-3840x2160-11455.jpg}\"</ax-image>"]
+  },
+  "ax-list": {
+    "prefix": "ax-list",
+    "body": ["<ax-list></ax-list>"]
+  },
+  "ax-loading": {
+    "prefix": "ax-loading",
+    "body": ["<ax-loading *ngIf=\"isLoading\"></ax-loading>"]
+  },
+  "ax-navbar": {
+    "prefix": "ax-navbar",
+    "body": [
+      "<ax-navbar></ax-navbar>"
+    ]
+  },
+  "ax-picker": {
+    "prefix": "ax-picker",
+    "body": [
+      "<ax-picker><ax-picker-column></ax-picker-column></ax-picker>"
+    ]
+  },
+  "ax-popover": {
+    "prefix": "ax-popover",
+    "body": [
+      "<ax-popover></ax-popover>"
+    ]
+  },
+  "ax-progress-bar": {
+    "prefix": "ax-progress-bar",
+    "body": [
+      "<ax-progress-bar [progress]=\"${1:75}\" color=\"${2:primary}\"></ax-progress-bar>"
+    ]
+  },
+  "ax-result": {
+    "prefix": "ax-result",
+    "body": [
+      "<ax-result type=\"${1:danger}\" caption=\"${2:Invalid!!!}\" description=\"${3:This is not valid!}\"></ax-result>"
+    ]
+  },
+  "ax-scheduler": {
+    "prefix": "ax-scheduler",
+    "body": [
+      "<ax-scheduler></ax-scheduler>"
+    ]
+  },
+  "ax-skelton": {
+    "prefix": "ax-skelton",
+    "body": [
+      "<ax-skelton></ax-skelton>"
+    ]
+  },
+  "ax-tabs": {
+    "prefix": "ax-tabs",
+    "body": [
+      "<ax-tabs></ax-tabs>"
+    ]
+  },
+  "ax-tag": {
+    "prefix": "ax-tag",
+    "body": [
+      "<ax-tag color=\"${1:primary}\" text=\"${2:text}\"></ax-tag>"
+    ]
+  },
+
+
   "ax-data-table": {
     "prefix": "ax-data-table",
     "body": [
@@ -124,48 +308,7 @@
       "</ax-data-table>"
     ]
   },
-  "ax-data-pager": {
-    "prefix": "ax-data-pager",
-    "body": [
-      "<ax-data-pager [total]=\"${1:total}\" [size]=\"${2:50}\" [displayMode]=\"${3:custom}\">",
-      "   <ax-prefix>",
-      "       <ax-data-pager-page-sizes>",
-      "   </ax-data-pager-page-sizes>",
-      "   </ax-prefix>",
-      "   <ax-suffix>",
-      "       <ax-data-pager-prev-buttons></ax-data-pager-prev-buttons>",
-      "       <ax-data-pager-input-selector></ax-data-pager-input-selector>",
-      "       <ax-data-pager-info text=\"${4:custom}\"></ax-data-pager-info>",
-      "       <ax-data-pager-next-buttons></ax-data-pager-next-buttons>",
-      "   </ax-suffix>",
-      "</ax-data-pager>"
-    ]
-  },
-  "ax-date-picker": {
-    "prefix": "ax-date-picker",
-    "body": [
-      "<ax-date-picker format=\"${1:MMM / YYYY -  dd}\" [value]=\"${2:}\" ></ax-date-picker>"
-    ],
-    "description": "The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay."
-  },
-  "ax-drawer": {
-    "prefix": "ax-drawer",
-    "body": [
-      "<ax-drawer-container>",
-      " <ax-drawer #drawer location=\"${1:start}\" [collapsed]=\"${2:true}\" [mode]=\"'${3:overlay}'\">",
-      "     <ax-content>",
-      "       ${4:// Add your drawer content here.}",
-      "     </ax-content>",
-      "</ax-drawer>",
-      " <ax-drawer-content class=\"md:ax-bg-slate-50\">",
-      "     <ax-content>",
-      "       ${5:// Add your page content here or pass child component (router-outlet).}",
-      "     </ax-content>",
-      " </ax-drawer-content>",
-      "</ax-drawer-container>"
-    ],
-    "description": "create Drawer"
-  },
+
   "ax-dropdown-button": {
     "prefix": "ax-dropdown-button",
     "body": [
@@ -188,14 +331,6 @@
       "</ax-button>"
     ]
   },
-  "ax-form": {
-    "prefix": "ax-form",
-    "body": [
-      "<ax-form #form validationMessageMode=\"tooltip\">",
-      " ${1}",
-      "</ax-form>"
-    ]
-  },
   "ax-form-field": {
     "prefix": "ax-form",
     "body": [
@@ -205,26 +340,7 @@
       "</ax-form-field>"
     ]
   },
-  "ax-image": {
-    "prefix": "ax-image",
-    "body": ["<ax-image src=\"${1}\"></ax-image>"]
-  },
-  "ax-uploader": {
-    "prefix": "ax-uploader",
-    "body": ["<ax-uploader>${1}</ax-uploader>"]
-  },
-  "ax-menu": {
-    "prefix": "ax-menu",
-    "body": [
-      "<ax-menu [textField]=\"'${1:}'\"  [items]=\"${2:}\" direction=\"${3:vertical}\" [hasChildField]=\"'${4:}'\"  [icon]=\"'${5:}'\" [disableField]=\"'${6:}'\" (onMenuItemClick)=\"${7:onMenuItemClick($event)}\"></ax-menu>"
-    ]
-  },
-  "ax-number-box": {
-    "prefix": "ax-number-box",
-    "body": [
-      " <ax-number-box [decimals]=\"${1:}\"  allowNull=\"${2:}\" [minValue]=\"${3:}\" [maxValue]=\"${4:}\"  [thousandsSeparator]=\"${5:}\" [(value)]=\"${5:}\"[padDecimalZeros]=\"${6:}\"></ax-number-box>"
-    ]
-  },
+
   "ax-password-box": {
     "prefix": "ax-password-box",
     "body": [
@@ -239,69 +355,12 @@
     ],
     "description": "A Form shows a set of related fields in a structured way with validation feature."
   },
-  "ax-progress-bar": {
-    "prefix": "ax-progress-bar",
-    "body": [
-      "<ax-progress-bar color=\"${1:secondary}\" [value]=\"${2:}\" ></ax-progress-bar>"
-    ]
-  },
-  "ax-result": {
-    "prefix": "ax-result",
-    "body": [
-      "<ax-result type=\"${1:success}\" caption=\"${2:Invoice paid successfully}\"",
-      "   description=\"${3:Payment has been completed successfully and your service will be activated in a few minutes.",
-      "   You can view your current account history and service status in the user panel.}\">",
-      "   <div class=\"ax-flex ax-items-center\">",
-      "     <ax-button color=\"${4:dark}\" text=\"${5:Return to the panel}\" class=\"ax-mx-auto\">",
-      "         <ax-prefix>",
-      "             <ax-icon>",
-      "                 <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"ax-h-6 ax-w-6\" fill=\"none\"",
-      "                 viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\">",
-      "                 <path stroke-linecap=\"round\" stroke-linejoin=\"round",
-      "                 d=\"M10 19l-7-7m0 0l7-7m-7 7h18\" />",
-      "                 </svg>",
-      "             </ax-icon>",
-      "         </ax-prefix>",
-      "     </ax-button>",
-      "   </div>",
-      "</ax-result>"
-    ]
-  },
   "ax-radio": {
     "prefix": "ax-radio",
     "body": [
       "<ax-radio [disabled]=\"${1:false}\"><ax-label>${2:title}</ax-label></ax-radio>"
     ],
     "description": "create radio-button"
-  },
-  "ax-select-box": {
-    "prefix": "ax-select-box",
-    "body": [
-      "<ax-select-box [items]=\"${1:}\"  textField=\"${2:}\" valueField=\"${3:}\" [value]=\"${4:}\"  multiple=\"${5:false}\"  [checkbox]=\"${6:false}\" allowNull=\"${7:true}\" [searchSettings]=\"{enabled: ${8:true}}\"></ax-select-box>"
-    ]
-  },
-  "ax-selection-list": {
-    "prefix": "ax-selection-list",
-    "body": [
-      "<ax-selection-list  [items]=\"${1:}\" valueField=\"${2:}\" textField=\"${3:}\" [direction]=\"${4:'horizontal'}\"></ax-selection-list>"
-    ]
-  },
-  "ax-skelton": {
-    "prefix": "ax-skelton",
-    "body": [
-      "<div class=\"ax-flex\">",
-      " <div class=\"ax-block ax-w-28 ax-h-28 ax-skeleton\"></div>",
-      " <div class=\"ax-ms-3\">",
-      "     <div class=\"ax-block ax-w-60 ax-h-8 ax-skeleton\"></div>",
-      "     <div class=\"ax-block ax-w-44 ax-h-4 ax-mt-2 ax-skeleton\"></div>",
-      "     <div class=\"ax-block ax-w-12 ax-h-8 ax-mt-6 ax-skeleton\"></div>",
-      " </div>",
-      "</div>"
-    ]
-  },
-  "ax-switch": {
-    "prefix": "ax-switch",
-    "body": ["<ax-switch [value]=\"${1:}\"></ax-switch>"]
   },
   "ax-table": {
     "prefix": "ax-table",
@@ -339,31 +398,11 @@
       "</table>"
     ]
   },
-  "ax-tabs": {
-    "prefix": "ax-tabs",
-    "body": [
-      "<ax-tabs class=\"ax-look-${1:pills-color} mytabs ax-tabs-fit ax-w-full\">",
-      " <ax-tab-item text=\"${2:tabName1}\" (activeChange)=\"_handleActiveChange1($event)\"></ax-tab-item>",
-      " <ax-tab-item text=\"${2:tabName2}\" (activeChange)=\"_handleActiveChange2($event)\"></ax-tab-item>",
-      "</ax-tabs>"
-    ]
-  },
-  "ax-text-box": {
-    "prefix": "ax-text-box",
-    "body": ["<ax-text-box></ax-text-box>"],
-    "description": "create text-box"
-  },
-  "ax-loading": {
-    "prefix": "ax-loading",
-    "body": ["<ax-loading *ngIf=\"isLoading\"></ax-loading>"]
-  },
+
+
   "ax-label": {
     "prefix": "ax-label",
     "body": ["<ax-label>${1:Type your label here...}</ax-label>"]
-  },
-  "ax-textarea": {
-    "prefix": "ax-textarea",
-    "body": ["<ax-textarea></ax-textarea>"]
   },
   "ax-page-footer": {
     "prefix": "ax-page-footer",
