@@ -312,21 +312,21 @@
   "ax-dropdown-button": {
     "prefix": "ax-dropdown-button",
     "body": [
-      "<ax-button text=\"${1:}\">",
+      "<ax-button text=\"${1:Text}\">",
       "  <ax-dropdown-panel (onItemClick)=\"${2:handleOnItemClick($event)}\">",
-      "     <ax-button-item text=\"${3:}\" name=\"${4:}\">",
+      "     <ax-button-item text=\"${3:Text}\" name=\"${4:}\">",
       "       <ax-prefix>",
-      "        <ax-icon icon=\"${5:}\"></ax-icon>",
+      "        <ax-icon icon=\"${5:icon}\"></ax-icon>",
       "       </ax-prefix>",
       "     </ax-button-item>",
-      "     <ax-button-item text=\"${6:}\" color=\"${7:}\" name=\"${8:}\">",
+      "     <ax-button-item text=\"${6:Text}\" color=\"${7:primary}\" name=\"${8:Name}\">",
       "       <ax-prefix>",
-      "       <ax-icon icon=\"${9:}\"></ax-icon>",
+      "       <ax-icon icon=\"${9:icon}\"></ax-icon>",
       "       </ax-prefix>",
       "     </ax-button-item>",
       "  </ax-dropdown-panel>",
       "       <ax-suffix>",
-      "         <ax-icon icon=\"${10:}\"></ax-icon>",
+      "         <ax-icon icon=\"${10:icon}\"></ax-icon>",
       "       </ax-suffix>",
       "</ax-button>"
     ]
@@ -336,7 +336,7 @@
     "body": [
       "<ax-form-field>",
       " <ax-label>Username</ax-label>",
-      " ${1}",
+      " ${1:value}",
       "</ax-form-field>"
     ]
   },
@@ -410,19 +410,19 @@
   },
   "ax-suffix": {
     "prefix": "ax-suffix",
-    "body": ["<ax-suffix>${1:}</ax-suffix>"]
+    "body": ["<ax-suffix>${1:value}</ax-suffix>"]
   },
   "ax-prefix": {
     "prefix": "ax-prefix",
-    "body": ["<ax-prefix>${1:}</ax-prefix>"]
+    "body": ["<ax-prefix>${1:value}</ax-prefix>"]
   },
   "ax-title": {
     "prefix": "ax-title",
-    "body": ["<ax-title>${1:}</ax-title>"]
+    "body": ["<ax-title>${1:value}</ax-title>"]
   },
   "ax-sub-title": {
     "prefix": "ax-sub-title",
-    "body": ["<ax-sub-title>${1:}</ax-sub-title>"]
+    "body": ["<ax-sub-title>${1:value}</ax-sub-title>"]
   },
   "ax-close-button": {
     "prefix": "ax-close-button",
@@ -430,14 +430,14 @@
   },
   "ax-content": {
     "prefix": "ax-content",
-    "body": ["<ax-content>${1:}</ax-content>"]
+    "body": ["<ax-content>${1:value}</ax-content>"]
   },
   "ax-icon": {
     "prefix": "ax-icon",
     "body": [
-      "     <ax-icon class=\"${1:}\">",
+      "     <ax-icon class=\"${1:class-name}\">",
       "      // You can place svg, img, i, span here or use class propperty on ax-icon tag",
-      "      ${2:}                                                                        ",
+      "      ${2:value}                                                                        ",
       "     </ax-icon>"
     ]
   },
