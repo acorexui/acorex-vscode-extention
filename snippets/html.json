@@ -21,7 +21,7 @@
       "<ax-button-group color=\"${1:primary}\" (onItemClick)=\"${2:handleOnItemClick($event)}\">",
       "  <ax-button-item text=\"${3:Bold}\">",
       "    <ax-prefix>",
-      "     <ax-icon icon=\"${4:}\"></ax-icon>",
+      "     <ax-icon icon=\"${4:icon-class}\"></ax-icon>",
       "    </ax-prefix>",
       "  </ax-button-item>",
       "</ax-button-group>"
@@ -164,7 +164,7 @@
   "ax-avatar": {
     "prefix": "ax-avatar",
     "body": [
-      "<ax-avatar></ax-avatar>"
+      "<ax-avatar size=$\"{1:32}\"></ax-avatar>"
     ]
   },
   "ax-badge": {
